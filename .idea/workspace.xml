@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba8a9a34-98b4-4db4-97ff-6cca61955f0f" name="Default Changelist" comment="">
+    <list default="true" id="ba8a9a34-98b4-4db4-97ff-6cca61955f0f" name="Default Changelist" comment="testing intellij git commit">
+      <change afterPath="$PROJECT_DIR$/src/com/biblioteca/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/twu-biblioteca-kurtis-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/twu-biblioteca-kurtis-master.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Biblioteca.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,30 +18,104 @@
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="twu-biblioteca-kurtis-master" />
+  </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/biblioteca/BookTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1559322326055" expanded="true" signature="25:346" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Biblioteca.java">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Book.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Prompter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+              <folding>
+                <element signature="e#152#153#0" expanded="true" />
+                <element signature="e#197#198#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/test/Prompter.test" />
+        <option value="$PROJECT_DIR$/test/PrompterTest.java" />
+        <option value="$PROJECT_DIR$/src/com.testPackage/Biblioteca.java" />
+        <option value="$PROJECT_DIR$/test/com/testPackage/PrompterTest.java" />
+        <option value="$PROJECT_DIR$/src/Biblioteca.java" />
+        <option value="$PROJECT_DIR$/Biblioteca.java" />
+        <option value="$PROJECT_DIR$/Prompter.java" />
+        <option value="$PROJECT_DIR$/src/com.testPackage/Prompter.java" />
+        <option value="$PROJECT_DIR$/src/biblioteca/Prompter.java" />
+        <option value="$PROJECT_DIR$/src/biblioteca/Biblioteca.java" />
+        <option value="$PROJECT_DIR$/src/com/bilbioteca/Prompter.java" />
+        <option value="$PROJECT_DIR$/src/Prompter.java" />
+        <option value="$PROJECT_DIR$/src/com/biblioteca/Biblioteca.java" />
+        <option value="$PROJECT_DIR$/test/com/biblioteca/PrompterTest.java" />
+        <option value="$PROJECT_DIR$/src/com/biblioteca/Prompter.java" />
+        <option value="$PROJECT_DIR$/test/com/biblioteca/BookTest.java" />
+        <option value="$PROJECT_DIR$/src/com/biblioteca/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/biblioteca/Book.java" />
       </list>
     </option>
+  </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="JUnit" name="All in twu-biblioteca-kurtis-master" />
+    </enabled-run-configurations>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="-1" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -51,11 +129,6 @@
               <item name="twu-biblioteca-kurtis-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="twu-biblioteca-kurtis-master" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="twu-biblioteca-kurtis-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="twu-biblioteca-kurtis-master" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -65,11 +138,30 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.biblioteca" />
+      <recent name="" />
+      <recent name="com.testPackage" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/biblioteca" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/com/bilbioteca" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/com.testPackage" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -82,6 +174,48 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.biblioteca.Main" />
+      <module name="twu-biblioteca-kurtis-master" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in twu-biblioteca-kurtis-master" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="twu-biblioteca-kurtis-master" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrompterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="twu-biblioteca-kurtis-master" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PrompterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.All in twu-biblioteca-kurtis-master" />
+      <item itemvalue="JUnit.PrompterTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PrompterTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -115,29 +249,70 @@
       <option name="project" value="LOCAL" />
       <updated>1559302828697</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="testing intellij git commit">
+      <created>1559302855652</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1559302855652</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 17h 35m 43s.xml">
+      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 18h 04m 10s.xml">
+      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 18h 04m 25s.xml">
+      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 18h 04m 38s.xml">
+      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 18h 05m 28s.xml">
+      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 18h 05m 36s.xml">
+      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 18h 07m 35s.xml">
+      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 18h 08m 02s.xml">
+      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 18h 08m 16s.xml">
+      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 18h 11m 35s.xml">
+      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4981685" visible="true" weight="0.2532189" />
+      <window_info id="Structure" order="1" sideWeight="0.50183153" side_tool="true" weight="0.2532189" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32891566" />
+      <window_info id="Favorites" order="6" sideWeight="0.50183153" side_tool="true" weight="0.2532189" />
+      <window_info active="true" anchor="bottom" id="Messages" order="0" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32891566" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3421687" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -204,8 +379,47 @@
     <option name="LAST_COMMIT_MESSAGE" value="testing intellij git commit" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Biblioteca.java">
+    <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Biblioteca.class">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Main.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Prompter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding>
+            <element signature="e#152#153#0" expanded="true" />
+            <element signature="e#197#198#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/biblioteca/BookTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1559322326055" expanded="true" signature="25:346" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
