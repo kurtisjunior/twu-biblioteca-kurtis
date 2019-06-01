@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba8a9a34-98b4-4db4-97ff-6cca61955f0f" name="Default Changelist" comment="testing intellij git commit">
-      <change afterPath="$PROJECT_DIR$/src/com/biblioteca/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/twu-biblioteca-kurtis-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/twu-biblioteca-kurtis-master.iml" afterDir="false" />
+    <list default="true" id="ba8a9a34-98b4-4db4-97ff-6cca61955f0f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Biblioteca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/biblioteca/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/biblioteca/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +23,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="255">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Prompter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#152#153#0" expanded="true" />
+                <element signature="e#197#198#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -35,33 +46,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/biblioteca/BookTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+            <state relative-caret-position="180">
+              <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1559322326055" expanded="true" signature="25:346" ph="..." />
+                <element signature="e#0#374#0" expanded="true" />
+                <marker date="1559331645082" expanded="true" signature="31:374" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Book.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Prompter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+            <state relative-caret-position="360">
+              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
               <folding>
-                <element signature="e#152#153#0" expanded="true" />
-                <element signature="e#197#198#0" expanded="true" />
+                <element signature="e#419#420#0" expanded="true" />
+                <element signature="e#453#454#0" expanded="true" />
+                <element signature="e#486#487#0" expanded="true" />
+                <element signature="e#507#508#0" expanded="true" />
+                <element signature="e#425#426#0" expanded="true" />
+                <element signature="e#457#458#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,10 +102,10 @@
         <option value="$PROJECT_DIR$/src/Prompter.java" />
         <option value="$PROJECT_DIR$/src/com/biblioteca/Biblioteca.java" />
         <option value="$PROJECT_DIR$/test/com/biblioteca/PrompterTest.java" />
-        <option value="$PROJECT_DIR$/src/com/biblioteca/Prompter.java" />
         <option value="$PROJECT_DIR$/test/com/biblioteca/BookTest.java" />
-        <option value="$PROJECT_DIR$/src/com/biblioteca/Main.java" />
         <option value="$PROJECT_DIR$/src/com/biblioteca/Book.java" />
+        <option value="$PROJECT_DIR$/src/com/biblioteca/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/biblioteca/Prompter.java" />
       </list>
     </option>
   </component>
@@ -109,8 +115,8 @@
     </enabled-run-configurations>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-1" />
-    <option name="y" value="23" />
+    <option name="x" value="10" />
+    <option name="y" value="35" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
@@ -128,6 +134,17 @@
             <path>
               <item name="twu-biblioteca-kurtis-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="twu-biblioteca-kurtis-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="twu-biblioteca-kurtis-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="twu-biblioteca-kurtis-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="twu-biblioteca-kurtis-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="twu-biblioteca-kurtis-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="biblioteca" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -256,7 +273,21 @@
       <option name="project" value="LOCAL" />
       <updated>1559302855652</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="displays welcome message and books">
+      <created>1559322971000</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1559322971000</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Books display author and published date">
+      <created>1559371939122</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1559371939122</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -302,10 +333,10 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.50183153" side_tool="true" weight="0.2532189" />
-      <window_info active="true" anchor="bottom" id="Messages" order="0" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -376,7 +407,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="testing intellij git commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing intellij git commit" />
+    <MESSAGE value="displays welcome message and books" />
+    <MESSAGE value="Books display author and published date" />
+    <option name="LAST_COMMIT_MESSAGE" value="Books display author and published date" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Biblioteca.class">
@@ -385,39 +418,48 @@
     <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Main.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Prompter.java">
+    <entry file="file://$PROJECT_DIR$/test/com/biblioteca/BookTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        <state relative-caret-position="180">
+          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
           <folding>
-            <element signature="e#152#153#0" expanded="true" />
-            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#0#374#0" expanded="true" />
+            <marker date="1559331645082" expanded="true" signature="31:374" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/biblioteca/BookTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        <state relative-caret-position="360">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1559322326055" expanded="true" signature="25:346" ph="..." />
+            <element signature="e#419#420#0" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#507#508#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Book.java">
+    <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Prompter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        <state relative-caret-position="263">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#152#153#0" expanded="true" />
+            <element signature="e#197#198#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

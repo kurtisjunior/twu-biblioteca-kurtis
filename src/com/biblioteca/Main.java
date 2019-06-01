@@ -6,13 +6,12 @@ public class Main {
         Book[] booksArray = new Book[2];
 
         booksArray[0] = new Book("Matthew Syed", "Bounce", "2010");
-        booksArray[1] = new Book("Plato", "The Republic", "308");
+        booksArray[1] = new Book("Plato", "The Republic", "380BC");
 
         //pass the array of book objects to the prompter
         Prompter prompter = new Prompter(booksArray);
 
         prompter.welcomeMessage();
-
-        prompter.displayBooks();
+        prompter.menu();
     }
 }
