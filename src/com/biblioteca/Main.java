@@ -8,13 +8,11 @@ public class Main {
         booksArray[0] = new Book("Matthew Syed", "Bounce", "2010");
         booksArray[1] = new Book("Plato", "The Republic", "308");
 
-        //pass the library instance to the prompter
+        //pass the array of book objects to the prompter
         Prompter prompter = new Prompter(booksArray);
 
-       //display the welcome message
         prompter.welcomeMessage();
 
         prompter.displayBooks();
     }
 }
-
