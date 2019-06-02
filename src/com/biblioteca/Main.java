@@ -11,7 +11,10 @@ public class Main {
         //pass the array of book objects to the prompter
         Prompter prompter = new Prompter(booksArray);
 
-        prompter.welcomeMessage();
-        prompter.menu();
+        prompter.displayWelcomeMessage();
+
+        while(!prompter.quit) {
+            prompter.displayMenu();
+        }
     }
 }
