@@ -19,62 +19,64 @@
     <favorites_list name="twu-biblioteca-kurtis-master" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Prompter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/biblioteca/BookTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1559505345325" expanded="true" signature="0:416" ph="..." />
-                <marker date="1559505345325" expanded="true" signature="25:416" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Book.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-              <folding>
-                <element signature="e#419#420#0" expanded="true" />
-                <element signature="e#453#454#0" expanded="true" />
-                <element signature="e#486#487#0" expanded="true" />
-                <element signature="e#507#508#0" expanded="true" />
-                <element signature="e#425#426#0" expanded="true" />
-                <element signature="e#457#458#0" expanded="true" />
-                <element signature="e#539#540#0" expanded="true" />
-                <element signature="e#576#577#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.44189993">
+      <split-first>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Main.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Prompter.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="311">
+                  <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Book.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="360">
+                  <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+                  <folding>
+                    <element signature="e#539#540#0" expanded="true" />
+                    <element signature="e#584#585#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/test/com/biblioteca/BookTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#478#479#0" expanded="true" />
+                    <element signature="e#544#545#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -104,10 +106,12 @@
         <option value="$PROJECT_DIR$/src/com/biblioteca/Biblioteca.java" />
         <option value="$PROJECT_DIR$/test/com/biblioteca/PrompterTest.java" />
         <option value="$PROJECT_DIR$/src/com/biblioteca/Menu.java" />
+        <option value="$PROJECT_DIR$/src/com/biblioteca/Library.java" />
+        <option value="$PROJECT_DIR$/test/com/biblioteca/LibraryTest.java" />
+        <option value="$PROJECT_DIR$/src/com/biblioteca/Prompter.java" />
         <option value="$PROJECT_DIR$/src/com/biblioteca/Main.java" />
         <option value="$PROJECT_DIR$/src/com/biblioteca/Book.java" />
         <option value="$PROJECT_DIR$/test/com/biblioteca/BookTest.java" />
-        <option value="$PROJECT_DIR$/src/com/biblioteca/Prompter.java" />
       </list>
     </option>
   </component>
@@ -117,10 +121,10 @@
     </enabled-run-configurations>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="10" />
-    <option name="y" value="149" />
+    <option name="x" value="-24" />
+    <option name="y" value="90" />
     <option name="width" value="1440" />
-    <option name="height" value="763" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -205,7 +209,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.BookTest">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.biblioteca.Main" />
       <module name="twu-biblioteca-kurtis-master" />
@@ -242,6 +246,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LibraryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="twu-biblioteca-kurtis-master" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.biblioteca.LibraryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PrompterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="twu-biblioteca-kurtis-master" />
       <option name="PACKAGE_NAME" value="" />
@@ -256,10 +275,12 @@
       <item itemvalue="JUnit.All in twu-biblioteca-kurtis-master" />
       <item itemvalue="JUnit.PrompterTest" />
       <item itemvalue="JUnit.BookTest" />
+      <item itemvalue="JUnit.LibraryTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.BookTest" />
+        <item itemvalue="JUnit.LibraryTest" />
         <item itemvalue="JUnit.PrompterTest" />
       </list>
     </recent_temporary>
@@ -324,38 +345,45 @@
       <option name="project" value="LOCAL" />
       <updated>1559374643880</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Book numbers added for checkout">
+      <created>1559506121949</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1559506121949</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 18h 04m 25s.xml">
-      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
+    <history-entry file="LibraryTest - 2019.06.03 at 11h 09m 20s.xml">
+      <configuration name="LibraryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 18h 04m 38s.xml">
-      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
+    <history-entry file="LibraryTest - 2019.06.03 at 11h 10m 38s.xml">
+      <configuration name="LibraryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 18h 05m 28s.xml">
-      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
+    <history-entry file="LibraryTest - 2019.06.03 at 11h 12m 28s.xml">
+      <configuration name="LibraryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 18h 05m 36s.xml">
-      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
+    <history-entry file="LibraryTest - 2019.06.03 at 11h 14m 09s.xml">
+      <configuration name="LibraryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 18h 07m 35s.xml">
-      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 18h 08m 02s.xml">
-      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 18h 08m 16s.xml">
-      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.05.31 at 18h 11m 35s.xml">
-      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BookTest - 2019.06.02 at 20h 46m 20s.xml">
+    <history-entry file="BookTest - 2019.06.03 at 11h 32m 00s.xml">
       <configuration name="BookTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BookTest - 2019.06.02 at 20h 48m 39s.xml">
+    <history-entry file="BookTest - 2019.06.03 at 11h 32m 43s.xml">
+      <configuration name="BookTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookTest - 2019.06.03 at 11h 34m 36s.xml">
+      <configuration name="BookTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookTest - 2019.06.03 at 11h 34m 42s.xml">
+      <configuration name="BookTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookTest - 2019.06.03 at 15h 10m 36s.xml">
+      <configuration name="BookTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookTest - 2019.06.03 at 15h 11m 08s.xml">
       <configuration name="BookTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -373,7 +401,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32771084" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.07388535" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.3313253" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.3493976" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -447,7 +475,8 @@
     <MESSAGE value="displays welcome message and books" />
     <MESSAGE value="Books display author and published date" />
     <MESSAGE value="Menu added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menu added" />
+    <MESSAGE value="Book numbers added for checkout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Book numbers added for checkout" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Biblioteca.class">
@@ -466,48 +495,67 @@
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Book.java">
+    <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Library.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
-            <element signature="e#419#420#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#486#487#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/biblioteca/BookTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1559505345325" expanded="true" signature="0:416" ph="..." />
-            <marker date="1559505345325" expanded="true" signature="25:416" ph="..." />
+            <element signature="e#131#132#0" expanded="true" />
+            <element signature="e#174#175#0" expanded="true" />
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#234#235#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="255">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Prompter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+        <state relative-caret-position="311">
+          <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#539#540#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/biblioteca/LibraryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1559556870775" expanded="true" signature="0:413" ph="..." />
+            <marker date="1559556870775" expanded="true" signature="25:413" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/biblioteca/BookTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
           </folding>
         </state>
       </provider>
