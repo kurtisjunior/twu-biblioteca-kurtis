@@ -1,11 +1,13 @@
 package com.biblioteca;
+import java.util.ArrayList;
 
 public class Main {
     public static void main (String[] args) {
 
-        Book[] booksArray = new Book[2];
-        booksArray[0] = new Book("Matthew Syed", "Bounce", "2010");
-        booksArray[1] = new Book("Plato", "The Republic", "380BC");
+        ArrayList<Book> booksArray = new ArrayList<>();
+
+        booksArray.add(new Book("Matthew Syed", "Bounce", "2010"));
+        booksArray.add(new Book("Plato", "the Republic", "380BC"));
 
 
         Library library = new Library(booksArray);
