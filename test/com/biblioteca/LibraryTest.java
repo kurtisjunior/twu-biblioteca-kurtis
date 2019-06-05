@@ -27,32 +27,34 @@ public class LibraryTest {
 
     @Test
     public void userCanCheckOutBook() {
-        assertTrue(library.checkOut(1));
+        assertTrue(library.checkOut("testTitle"));
     }
 
-//    @Test
-//    public void checkedOutBooksAreFilteredFromBookList() {
-//        ArrayList<Book> availableBooks = library.getBooks("available");
-//
-//        assertEquals(1, availableBooks.size());
-//        assertEquals("testAuthorTwo", availableBooks.get(0).getAuthor());
-//    }
+    @Test
+    public void checkedOutBooksAreFilteredFromBookList() {
+        library.checkOut("testTitle");
+        ArrayList<Book> availableBooks = library.getBooks("available");
+
+        assertEquals(1, availableBooks.size());
+        assertEquals("testAuthorTwo", availableBooks.get(0).getAuthor());
+    }
 
     @Test
     public void throwsIllegalArgumentExceptionWhenCheckedOutBookDoesNotExist() {
         assertThrows(IllegalArgumentException.class, () ->
-            library.checkOut(10));
+            library.checkOut("testTitleThree"));
     }
 
     @Test
     public void userCanCheckInBook(){
-        assertTrue(library.checkIn(1));
+        library.checkOut("testTitle");
+        assertTrue(library.checkIn("testTitle"));
     }
 
     @Test
     public void throwsIllegalArgumentExceptionWhenCheckedInBookDoesNotExist() {
         assertThrows(IllegalArgumentException.class, () ->
-                library.checkIn(10));
+                library.checkIn("testTitleThree"));
     }
 }
 

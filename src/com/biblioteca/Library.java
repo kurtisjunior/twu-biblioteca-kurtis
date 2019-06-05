@@ -27,10 +27,12 @@ public class Library {
         return availableBooks;
     }
 
-    public boolean checkOut(int checkedIndex){
+    public boolean checkOut(String checkedIndex){
         for(Book book : booksArray){
             try{
-                if(book.getIndex() == checkedIndex){
+                //format function here to compare two lower case strings
+
+                if(book.getTitle().equals(checkedIndex)){
                     return book.setCheckedOut();
                 }
             } catch(IllegalArgumentException iae){
@@ -41,9 +43,9 @@ public class Library {
         throw new IllegalArgumentException("The book you have selected does not exist, please try again\n\n");
     }
 
-    public boolean checkIn(int checkedIndex){
+    public boolean checkIn(String checkedIndex){
         for(Book book : booksArray){
-            if(book.getIndex() == checkedIndex){
+            if(book.getTitle().equals(checkedIndex)){
                 return book.setCheckedIn();
             }
         }

@@ -7,7 +7,7 @@ public class Main {
         ArrayList<Book> booksArray = new ArrayList<>();
 
         booksArray.add(new Book("Matthew Syed", "Bounce", "2010"));
-        booksArray.add(new Book("Plato", "the Republic", "380BC"));
+        booksArray.add(new Book("Plato", "The Republic", "380BC"));
 
 
         Library library = new Library(booksArray);
@@ -20,3 +20,12 @@ public class Main {
         }
     }
 }
+
+
+/*
+Edit the way books are checked out and checked in
+    With title and not index
+
+Fix Book object test
+
+ */

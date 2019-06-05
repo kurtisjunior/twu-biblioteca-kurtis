@@ -56,12 +56,10 @@ public class Prompter {
 
     public void displayBooks(){
         System.out.printf("%40s\n\n", "+++++ available books ++++++");
-        System.out.printf("%-22s%-22s%-22s%-22s\n","Author","Title","Published", "#");
+        System.out.printf("%-22s%-22s%-22s\n","Author","Title","Published");
         ArrayList<Book> booksArray = library.getBooks("available");
-        int index = 1;
         for(Book book : booksArray){
-            System.out.printf("%-22s%-22s%-22s%-22s\n", book.getAuthor(), book.getTitle(), book.getDate(), index);
-            index++;
+            System.out.printf("%-22s%-22s%-22s\n", book.getAuthor(), book.getTitle(), book.getDate());
         }
         System.out.println("\n");
     }
@@ -72,8 +70,10 @@ public class Prompter {
         while(!acceptableInput) {
             try {
                 Scanner scanner = new Scanner(System.in);
-                System.out.print("Enter book number to check out: ");
-                int input = Integer.parseInt(scanner.nextLine());
+                System.out.print("Enter the book title to check out: ");
+                String input = (scanner.nextLine());
+
+
                 try {
                    checkOutResult = library.checkOut(input);
                    acceptableInput = true;
@@ -97,9 +97,11 @@ public class Prompter {
         boolean checkInResult = false;
         while(!acceptableInput){
             try{
+
                 Scanner scanner = new Scanner(System.in);
-                System.out.print("Enter book number to check in: ");
-                int input = Integer.parseInt(scanner.nextLine());
+                System.out.print("Enter the book title to check in: ");
+                String input = (scanner.nextLine());
+
                 try{
                     checkInResult = library.checkIn(input);
                     acceptableInput = true;
