@@ -35,13 +35,22 @@ public class Book {
     }
 
     public boolean getCheckedStatus() {
-        return checkedOut;
+        return this.checkedOut;
     }
 
-    public boolean setCheckedStatus(String action) {
-        if (action == "check out" && checkedOut == false) {
+    public boolean setCheckedOut() {
+        if (!checkedOut) {
             return checkedOut = true;
         }
         throw new IllegalArgumentException("Sorry, that book is not available\n");
     }
+
+    public boolean setCheckedIn() {
+        if (checkedOut) {
+            checkedOut = false;
+            return true;
+        }
+        throw new IllegalArgumentException("Sorry, that book is already checked in\n");
+    }
+
 }

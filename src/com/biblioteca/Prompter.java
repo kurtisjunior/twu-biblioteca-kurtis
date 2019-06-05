@@ -1,7 +1,5 @@
 package com.biblioteca;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import java.util.Scanner;
@@ -15,18 +13,19 @@ public class Prompter {
     }
 
     public void displayWelcomeMessage() {
-        System.out.printf("Welcome to Biblioteca. Your one-stop shop for great book titles in Bangalore ! \n\n");
+        System.out.println("Welcome to Biblioteca. Your one-stop shop for great book titles in Bangalore ! \n\n");
     }
 
     public void displayMenu(){
         System.out.println("Menu options: ");
         System.out.println("1. List of books");
         System.out.println("2. Check out book");
-        System.out.println("3. Quit\n");
+        System.out.println("3. Check in book");
+        System.out.println("4. Quit\n");
 
-        boolean isAcceptable = false;
+        boolean acceptableInput = false;
 
-        while(!isAcceptable) {
+        while(!acceptableInput) {
             try{
                 Scanner scanner = new Scanner(System.in);
                 System.out.print("Choose an option: ");
@@ -34,13 +33,16 @@ public class Prompter {
 
                 switch(input) {
                     case 1:
-                        isAcceptable = true;
+                        acceptableInput = true;
                         displayBooks();
                         break;
                     case 2:
                         checkOutBook();
                         break;
                     case 3:
+                        checkInBook();
+                        break;
+                    case 4:
                         quitMenu = true;
                         System.exit(0);
                     default:
@@ -55,51 +57,66 @@ public class Prompter {
     public void displayBooks(){
         System.out.printf("%40s\n\n", "+++++ available books ++++++");
         System.out.printf("%-22s%-22s%-22s%-22s\n","Author","Title","Published", "#");
-
-        //get books
         ArrayList<Book> booksArray = library.getBooks("available");
-
-        for(int i = 0; i < booksArray.size(); i++) {
-            System.out.printf("%-22s%-22s%-22s%-22s\n", booksArray.get(i).getAuthor(), booksArray.get(i).getTitle(), booksArray.get(i).getDate(), booksArray.get(i).getIndex());
+        int index = 1;
+        for(Book book : booksArray){
+            System.out.printf("%-22s%-22s%-22s%-22s\n", book.getAuthor(), book.getTitle(), book.getDate(), index);
+            index++;
         }
         System.out.println("\n");
     }
 
     public void checkOutBook(){
-        boolean isAcceptable = false;
+        boolean acceptableInput = false;
         boolean checkOutResult = false;
-        while(!isAcceptable) {
+        while(!acceptableInput) {
             try {
-                //input
                 Scanner scanner = new Scanner(System.in);
                 System.out.print("Enter book number to check out: ");
                 int input = Integer.parseInt(scanner.nextLine());
-
-                //call the checkout method
                 try {
-
-                    //if input is acceptable then break the loop
                    checkOutResult = library.checkOut(input);
-                   isAcceptable = true;
-
-                   //catch the book checkout IAE
+                   acceptableInput = true;
                 } catch (IllegalArgumentException iae){
-                    System.out.printf(iae.getMessage());
+                    System.out.println(iae.getMessage());
                 }
-
-                //catch the book input error
             } catch (Exception e) {
                 System.out.println("Please enter a valid input");
             }
-
-            //determine result based on boolean
             if(checkOutResult){
                 System.out.println("\nSuccessfully checked out. Thank you ! Enjoy the book \n");
                 displayMenu();
             } else {
                 displayMenu();
             }
+        }
+    }
 
+    public void checkInBook(){
+        boolean acceptableInput = false;
+        boolean checkInResult = false;
+        while(!acceptableInput){
+            try{
+                Scanner scanner = new Scanner(System.in);
+                System.out.print("Enter book number to check in: ");
+                int input = Integer.parseInt(scanner.nextLine());
+                try{
+                    checkInResult = library.checkIn(input);
+                    acceptableInput = true;
+
+                } catch (IllegalArgumentException iae){
+                    System.out.println(iae.getMessage());
+                }
+            } catch (Exception e){
+                System.out.println("Please enter a valid input");
+            }
+
+            if(checkInResult){
+                System.out.println("\n Successfully checked in. Thank you !\n ");
+                displayMenu();
+            } else {
+                displayMenu();
+            }
         }
     }
 }

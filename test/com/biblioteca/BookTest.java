@@ -24,14 +24,28 @@ public class BookTest {
 
     @Test
     public void booksCanBeCheckedOut () {
-        testBook.setCheckedStatus("check out");
+        testBook.setCheckedOut();
         assertTrue(testBook.getCheckedStatus());
     }
 
     @Test
     public void throwsIllegalArgumentExceptionWhenBookAlreadyCheckedOut() {
         assertThrows(IllegalArgumentException.class, () ->
-                testBook.setCheckedStatus("check out"));
+                testBook.setCheckedOut());
+    }
+
+    @Test
+    public void booksCanBeCheckedIn () {
+        testBook.setCheckedOut();
+        testBook.setCheckedIn();
+        assertFalse(testBook.getCheckedStatus());
+    }
+
+    @Test
+    public void throwsIllegalArgumentExceptionWhenBookAlreadyCheckedIn() {
+        testBook.setCheckedIn();
+        assertThrows(IllegalArgumentException.class, () ->
+                testBook.setCheckedIn());
     }
 
 }

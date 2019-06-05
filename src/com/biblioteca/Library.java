@@ -1,7 +1,6 @@
 package com.biblioteca;
 
 import java.util.ArrayList;
-import java.util.stream.Collectors;
 
 
 public class Library {
@@ -18,7 +17,7 @@ public class Library {
 
     public ArrayList<Book> getBooks(String filter) {
         ArrayList<Book> availableBooks = new ArrayList<>();
-        if(filter == "available") {
+        if(filter.equals("available")) {
             for(Book book : booksArray) {
                 if(!book.getCheckedStatus()){
                     availableBooks.add(book);
@@ -32,11 +31,20 @@ public class Library {
         for(Book book : booksArray){
             try{
                 if(book.getIndex() == checkedIndex){
-                    return book.setCheckedStatus("check out");
+                    return book.setCheckedOut();
                 }
             } catch(IllegalArgumentException iae){
                 System.out.println(iae.getMessage());
                 return false;
+            }
+        }
+        throw new IllegalArgumentException("The book you have selected does not exist, please try again\n\n");
+    }
+
+    public boolean checkIn(int checkedIndex){
+        for(Book book : booksArray){
+            if(book.getIndex() == checkedIndex){
+                return book.setCheckedIn();
             }
         }
         throw new IllegalArgumentException("The book you have selected does not exist, please try again\n\n");

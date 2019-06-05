@@ -18,6 +18,5 @@ public class Main {
         while(!prompter.quitMenu) {
             prompter.displayMenu();
         }
-
     }
 }
