@@ -56,7 +56,24 @@ public class LibraryTest {
         assertThrows(IllegalArgumentException.class, () ->
                 library.checkIn("testTitleThree"));
     }
+
+    @Test
+    public void titleCaseDefaultsToLowerCase(){
+        assertEquals("testtitle", library.toLowerCase("TESTTITLE"));
+    }
+
+    @Test
+    public void userCanCheckOutBookInAnyCase(){
+        library.checkOut("TESTTITLE");
+    }
+
+    @Test
+    public void userCanCheckInBookInAnyCase(){
+        library.checkOut("testTitle");
+        library.checkIn("TESTTITLE");
+    }
 }
+
 
 
 

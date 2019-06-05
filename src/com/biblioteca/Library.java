@@ -27,12 +27,13 @@ public class Library {
         return availableBooks;
     }
 
-    public boolean checkOut(String checkedIndex){
+    public boolean checkOut(String checkedInput){
         for(Book book : booksArray){
             try{
-                //format function here to compare two lower case strings
+                String formatInput = toLowerCase(checkedInput);
+                String formatTitle = toLowerCase(book.getTitle());
 
-                if(book.getTitle().equals(checkedIndex)){
+                if(formatInput.equals(formatTitle)){
                     return book.setCheckedOut();
                 }
             } catch(IllegalArgumentException iae){
@@ -43,12 +44,32 @@ public class Library {
         throw new IllegalArgumentException("The book you have selected does not exist, please try again\n\n");
     }
 
-    public boolean checkIn(String checkedIndex){
+    public boolean checkIn(String checkedInput){
         for(Book book : booksArray){
-            if(book.getTitle().equals(checkedIndex)){
+            String formatInput = toLowerCase(checkedInput);
+            String formatTitle = toLowerCase(book.getTitle());
+
+            if(formatInput.equals(formatTitle)){
                 return book.setCheckedIn();
             }
         }
         throw new IllegalArgumentException("The book you have selected does not exist, please try again\n\n");
     }
+
+    public String toLowerCase(String checkedInput){
+        String lowerCase = "";
+        for(char letter : checkedInput.toCharArray()){
+            if(Character.isUpperCase(letter)) {
+                lowerCase += Character.toLowerCase(letter);
+            } else {
+                lowerCase += letter;
+            }
+        }
+        return lowerCase;
+    }
 }
+
+/*
+FIX:
+missing check in try block
+ */

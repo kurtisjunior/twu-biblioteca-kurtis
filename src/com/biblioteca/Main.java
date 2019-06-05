@@ -20,12 +20,3 @@ public class Main {
         }
     }
 }
-
-
-/*
-Edit the way books are checked out and checked in
-    With title and not index
-
-Fix Book object test
-
- */
