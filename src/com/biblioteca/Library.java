@@ -46,11 +46,17 @@ public class Library {
 
     public boolean checkIn(String checkedInput){
         for(Book book : booksArray){
-            String formatInput = toLowerCase(checkedInput);
-            String formatTitle = toLowerCase(book.getTitle());
+            try {
+                String formatInput = toLowerCase(checkedInput);
+                String formatTitle = toLowerCase(book.getTitle());
 
-            if(formatInput.equals(formatTitle)){
-                return book.setCheckedIn();
+                if(formatInput.equals(formatTitle)){
+                    return book.setCheckedIn();
+                }
+
+            } catch (IllegalArgumentException iae) {
+                System.out.println(iae.getMessage());
+                return false;
             }
         }
         throw new IllegalArgumentException("The book you have selected does not exist, please try again\n\n");
@@ -68,8 +74,3 @@ public class Library {
         return lowerCase;
     }
 }
-
-/*
-FIX:
-missing check in try block
- */

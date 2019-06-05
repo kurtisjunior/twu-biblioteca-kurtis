@@ -1,16 +1,16 @@
 package com.biblioteca;
 
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
 public class BookTest {
 
-    private static Book testBook;
+    private Book testBook;
 
-    @BeforeAll
-    public static void setUp(){
+    @BeforeEach
+    public void setUp(){
         testBook = new Book("testAuthor", "testTitle", "testDate");
     }
 
@@ -29,9 +29,12 @@ public class BookTest {
 
     @Test
     public void throwsIllegalArgumentExceptionWhenBookAlreadyCheckedOut() {
-        assertThrows(IllegalArgumentException.class, () ->
-                testBook.setCheckedOut());
+        testBook.setCheckedOut();
+        Throwable checkedOutIae = assertThrows(IllegalArgumentException.class, () ->
+            testBook.setCheckedOut());
+        assertEquals("Sorry, that book is not available\n", checkedOutIae.getMessage());
     }
+
 
     @Test
     public void booksCanBeCheckedIn () {
@@ -42,9 +45,9 @@ public class BookTest {
 
     @Test
     public void throwsIllegalArgumentExceptionWhenBookAlreadyCheckedIn() {
-        testBook.setCheckedIn();
-        assertThrows(IllegalArgumentException.class, () ->
+        Throwable checkedInIae = assertThrows(IllegalArgumentException.class, () ->
                 testBook.setCheckedIn());
+        assertEquals("Sorry, that book is already checked in\n", checkedInIae.getMessage());
     }
 
 }

@@ -1,6 +1,6 @@
 package com.biblioteca;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
@@ -9,11 +9,11 @@ import java.util.ArrayList;
 
 public class LibraryTest {
 
-    private static ArrayList<Book> testBooksArray;
-    private static Library library;
+    private ArrayList<Book> testBooksArray;
+    private Library library;
 
-    @BeforeAll
-    public static void setUp() {
+    @BeforeEach
+    public void setUp() {
         testBooksArray = new ArrayList<>();
         testBooksArray.add(new Book("testAuthor", "testTitle", "testDate"));
         testBooksArray.add(new Book("testAuthorTwo", "testTitleTwo", "testDateTwo"));
@@ -41,8 +41,9 @@ public class LibraryTest {
 
     @Test
     public void throwsIllegalArgumentExceptionWhenCheckedOutBookDoesNotExist() {
-        assertThrows(IllegalArgumentException.class, () ->
-            library.checkOut("testTitleThree"));
+        Throwable checkedOutIae = assertThrows(IllegalArgumentException.class, () ->
+                library.checkOut("invalid title"));
+        assertEquals("The book you have selected does not exist, please try again\n\n", checkedOutIae.getMessage());
     }
 
     @Test
@@ -53,8 +54,9 @@ public class LibraryTest {
 
     @Test
     public void throwsIllegalArgumentExceptionWhenCheckedInBookDoesNotExist() {
-        assertThrows(IllegalArgumentException.class, () ->
-                library.checkIn("testTitleThree"));
+        Throwable checkedInIae = assertThrows(IllegalArgumentException.class, () ->
+                library.checkIn("invalid title"));
+        assertEquals("The book you have selected does not exist, please try again\n\n", checkedInIae.getMessage());
     }
 
     @Test
