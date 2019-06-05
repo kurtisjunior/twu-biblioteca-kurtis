@@ -66,7 +66,7 @@ public class LibraryTest {
 
     @Test
     public void userCanCheckOutBookInAnyCase(){
-        library.checkOut("TESTTITLE");
+        assertTrue(library.checkOut("TESTTITLE"));
     }
 
     @Test
