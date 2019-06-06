@@ -35,18 +35,18 @@ public class Movie {
         return this.checkedOut;
     }
 
-    public boolean setCheckedOut() {
+    public boolean checkOut() {
         if (!checkedOut) {
             return checkedOut = true;
         }
-        throw new IllegalArgumentException("\nSorry, that book is not available\n");
+        throw new IllegalArgumentException("\nSorry, that movie is not available\n");
     }
 
-    public boolean setCheckedIn() {
+    public boolean checkIn() {
         if (checkedOut) {
             checkedOut = false;
             return true;
         }
-        throw new IllegalArgumentException("\nSorry, that book is already checked in\n");
+        throw new IllegalArgumentException("\nSorry, that movie is already checked in\n");
     }
 }

@@ -23,30 +23,30 @@ public class BookTest {
 
     @Test
     public void booksCanBeCheckedOut () {
-        testBook.setCheckedOut();
+        testBook.checkOut();
         assertTrue(testBook.getCheckedStatus());
     }
 
     @Test
     public void throwsIllegalArgumentExceptionWhenBookAlreadyCheckedOut() {
-        testBook.setCheckedOut();
+        testBook.checkOut();
         Throwable checkedOutIae = assertThrows(IllegalArgumentException.class, () ->
-            testBook.setCheckedOut());
+            testBook.checkOut());
         assertEquals("\nSorry, that book is not available\n", checkedOutIae.getMessage());
     }
 
 
     @Test
     public void booksCanBeCheckedIn () {
-        testBook.setCheckedOut();
-        testBook.setCheckedIn();
+        testBook.checkOut();
+        testBook.checkIn();
         assertFalse(testBook.getCheckedStatus());
     }
 
     @Test
     public void throwsIllegalArgumentExceptionWhenBookAlreadyCheckedIn() {
         Throwable checkedInIae = assertThrows(IllegalArgumentException.class, () ->
-                testBook.setCheckedIn());
+                testBook.checkIn());
         assertEquals("\nSorry, that book is already checked in\n", checkedInIae.getMessage());
     }
 

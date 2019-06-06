@@ -21,4 +21,9 @@ class MovieTest {
         assertEquals("testRating", movie.getRating());
     }
 
+    @Test
+    public void moviesCanBeCheckedOut(){
+        movie.checkOut();
+        assertTrue(movie.getCheckedStatus());
+    }
 }

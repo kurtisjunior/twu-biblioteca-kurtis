@@ -42,8 +42,9 @@ public class Prompter {
         System.out.println("1. List of books");
         System.out.println("2. List of movies");
         System.out.println("3. Check out book");
-        System.out.println("4. Return book");
-        System.out.println("5. Quit\n");
+        System.out.println("4. Check out movie");
+        System.out.println("6. Return book");
+        System.out.println("7. Quit\n");
         menuInput();
     }
 
@@ -56,12 +57,15 @@ public class Prompter {
                 displayMovies();
                 break;
             case 3:
-                checkOutBook();
+                checkOutItem("book");
                 break;
             case 4:
-                checkInBook();
+                checkOutItem("movie");
                 break;
             case 5:
+                checkInBook();
+                break;
+            case 6:
                 quitMenu = true;
                 System.out.println("\nThanks for using Biblioteca !");
                 System.exit(0);
@@ -91,19 +95,22 @@ public class Prompter {
     }
 
 
-    public String bookInput() {
+    public String getUserInput() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the book title: ");
         String input = (scanner.nextLine());
         return input;
     }
 
+    public void checkOutItem(String type){
+        String input = getUserInput();
+        if(type.equals("book")) checkOutBook(input); else checkOutMovie(input);
+    }
 
-    public void checkOutBook() {
+    public void checkOutBook(String input) {
         boolean success = false;
-        String input = bookInput();
         try {
-            success = library.checkOut(input);
+            success = library.checkOutBook(input);
         } catch (IllegalArgumentException iae) {
             System.out.println(iae.getMessage());
         }
@@ -112,17 +119,29 @@ public class Prompter {
         }
     }
 
-
     public void checkInBook() {
         boolean success = false;
-        String input = bookInput();
+        String input = getUserInput();
         try {
-            success = library.checkIn(input);
+            success = library.checkInBook(input);
         } catch (IllegalArgumentException iae) {
             System.out.println(iae.getMessage());
         }
         if(success) {
             System.out.println("\nSuccessfully returned. Thank you !\n ");
         }
+    }
+
+    public void checkOutMovie(String input){
+        boolean success = false;
+        try {
+            success = library.checkOutMovie(input);
+        } catch (IllegalArgumentException iae) {
+            System.out.println(iae.getMessage());
+        }
+        if(success){
+            System.out.println("\nSuccessfully checked out. Thank you ! Enjoy the movie \n");
+        }
+
     }
 }

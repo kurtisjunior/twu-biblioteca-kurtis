@@ -45,14 +45,14 @@ public class Library {
         return availableMovies;
     }
 
-    public boolean checkOut(String checkedInput){
+    public boolean checkOutBook(String checkedInput){
         for(Book book : booksArray){
             try{
                 String formatInput = toLowerCase(checkedInput);
                 String formatTitle = toLowerCase(book.getTitle());
 
                 if(formatInput.equals(formatTitle)){
-                    return book.setCheckedOut();
+                    return book.checkOut();
                 }
             } catch(IllegalArgumentException iae){
                 System.out.println(iae.getMessage());
@@ -62,14 +62,14 @@ public class Library {
         throw new IllegalArgumentException("\nThe book you have selected does not exist, please try again\n\n");
     }
 
-    public boolean checkIn(String checkedInput){
+    public boolean checkInBook(String checkedInput){
         for(Book book : booksArray){
             try {
                 String formatInput = toLowerCase(checkedInput);
                 String formatTitle = toLowerCase(book.getTitle());
 
                 if(formatInput.equals(formatTitle)){
-                    return book.setCheckedIn();
+                    return book.checkIn();
                 }
 
             } catch (IllegalArgumentException iae) {
@@ -78,6 +78,26 @@ public class Library {
             }
         }
         throw new IllegalArgumentException("The book you have selected does not exist, please try again\n\n");
+    }
+
+
+    public boolean checkOutMovie(String checkedInput){
+        for(Movie movie : moviesArray) {
+            try{
+                String formatInput = toLowerCase(checkedInput);
+                String formatTitle = toLowerCase(movie.getName());
+
+                if(formatInput.equals(formatTitle)){
+                    return movie.checkOut();
+                }
+
+            } catch (IllegalArgumentException iae) {
+                System.out.println(iae.getMessage());
+                return false;
+            }
+        }
+        throw new IllegalArgumentException("The movie you have selected does not exist, please try again\n\n");
+
     }
 
     public String toLowerCase(String checkedInput){

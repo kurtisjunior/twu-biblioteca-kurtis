@@ -28,14 +28,14 @@ public class Book {
         return this.checkedOut;
     }
 
-    public boolean setCheckedOut() {
+    public boolean checkOut() {
         if (!checkedOut) {
             return checkedOut = true;
         }
         throw new IllegalArgumentException("\nSorry, that book is not available\n");
     }
 
-    public boolean setCheckedIn() {
+    public boolean checkIn() {
         if (checkedOut) {
             checkedOut = false;
             return true;

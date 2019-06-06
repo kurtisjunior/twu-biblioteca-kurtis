@@ -14,7 +14,7 @@ public class Main {
         movieArray.add(new Movie("Whiplash", "2014", "Damien Chazelle", "8.5"));
         movieArray.add(new Movie("Blade Runner", "1982", "Ridley Scott", "8.2"));
 
-        Library library = new Library(bookArray,movieArray);
+        Library library = new Library(bookArray, movieArray);
         Prompter prompter = new Prompter(library);
 
         prompter.start();
