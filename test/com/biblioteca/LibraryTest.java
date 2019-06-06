@@ -43,7 +43,7 @@ public class LibraryTest {
     public void throwsIllegalArgumentExceptionWhenCheckedOutBookDoesNotExist() {
         Throwable checkedOutIae = assertThrows(IllegalArgumentException.class, () ->
                 library.checkOut("invalid title"));
-        assertEquals("The book you have selected does not exist, please try again\n\n", checkedOutIae.getMessage());
+        assertEquals("\nThe book you have selected does not exist, please try again\n\n", checkedOutIae.getMessage());
     }
 
     @Test

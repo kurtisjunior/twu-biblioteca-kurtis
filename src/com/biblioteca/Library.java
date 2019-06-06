@@ -41,7 +41,7 @@ public class Library {
                 return false;
             }
         }
-        throw new IllegalArgumentException("The book you have selected does not exist, please try again\n\n");
+        throw new IllegalArgumentException("\nThe book you have selected does not exist, please try again\n\n");
     }
 
     public boolean checkIn(String checkedInput){

@@ -1,7 +1,6 @@
 package com.biblioteca;
 
 import java.util.ArrayList;
-
 import java.util.Scanner;
 
 public class Prompter {
@@ -16,7 +15,7 @@ public class Prompter {
         System.out.println("Welcome to Biblioteca. Your one-stop shop for great book titles in Bangalore ! \n\n");
     }
 
-    public void userInput() {
+    public void menuInput() {
         boolean acceptableInput = false;
         while (!acceptableInput) {
             Scanner scanner = new Scanner(System.in);
@@ -37,7 +36,7 @@ public class Prompter {
         System.out.println("2. Check out book");
         System.out.println("3. Return book");
         System.out.println("4. Quit\n");
-        userInput();
+        menuInput();
     }
 
     public void handleMenu(int input) {
@@ -60,7 +59,6 @@ public class Prompter {
         }
 }
 
-
     public void displayBooks(){
         System.out.printf("%67s\n\n", "------ Available books ------");
         System.out.printf("%-22s%-22s%-22s%-22s%-22s\n","*** Author ***", (""), "*** Title ***", (""), "*** Published ***");
@@ -71,56 +69,39 @@ public class Prompter {
         System.out.println("\n");
     }
 
-    public void checkOutBook(){
-        boolean acceptableInput = false;
-        boolean checkOutResult = false;
-        while(!acceptableInput) {
-            try {
-                Scanner scanner = new Scanner(System.in);
-                System.out.print("Enter the book title to check out: ");
-                String input = (scanner.nextLine());
-                try {
-                   checkOutResult = library.checkOut(input);
-                   acceptableInput = true;
-                } catch (IllegalArgumentException iae){
-                    System.out.println(iae.getMessage());
-                }
-            } catch (Exception e) {
-                System.out.println("Please enter a valid input");
-            }
-            if(checkOutResult){
-                System.out.println("\nSuccessfully checked out. Thank you ! Enjoy the book \n");
-                displayMenu();
-            } else {
-                displayMenu();
-            }
+
+    public String bookInput() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the book title: ");
+        String input = (scanner.nextLine());
+        return input;
+    }
+
+
+    public void checkOutBook() {
+        boolean success = false;
+        String input = bookInput();
+        try {
+            success = library.checkOut(input);
+        } catch (IllegalArgumentException iae) {
+            System.out.println(iae.getMessage());
+        }
+        if(success){
+            System.out.println("\nSuccessfully checked out. Thank you ! Enjoy the book \n");
         }
     }
 
-    public void checkInBook(){
-        boolean acceptableInput = false;
-        boolean checkInResult = false;
-        while(!acceptableInput){
-            try{
-                Scanner scanner = new Scanner(System.in);
-                System.out.print("Enter the book title to return: ");
-                String input = (scanner.nextLine());
-                try{
-                    checkInResult = library.checkIn(input);
-                    acceptableInput = true;
 
-                } catch (IllegalArgumentException iae){
-                    System.out.println(iae.getMessage());
-                }
-            } catch (Exception e){
-                System.out.println("Please enter a valid input");
-            }
-            if(checkInResult){
-                System.out.println("\nSuccessfully returned. Thank you !\n ");
-                displayMenu();
-            } else {
-                displayMenu();
-            }
+    public void checkInBook() {
+        boolean success = false;
+        String input = bookInput();
+        try {
+            success = library.checkIn(input);
+        } catch (IllegalArgumentException iae) {
+            System.out.println(iae.getMessage());
+        }
+        if(success) {
+            System.out.println("\nSuccessfully returned. Thank you !\n ");
         }
     }
 }
