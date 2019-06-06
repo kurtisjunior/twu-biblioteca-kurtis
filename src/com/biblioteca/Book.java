@@ -1,18 +1,12 @@
 package com.biblioteca;
 
 public class Book {
-    private static int instanceCounter = 1;
-    private int index;
-
     private String author;
     private String title;
     private String date;
     private boolean checkedOut = false;
 
     public Book(String author, String title, String date) {
-        index = instanceCounter;
-        instanceCounter += 1;
-
         this.author = author;
         this.title = title;
         this.date = date;
@@ -28,10 +22,6 @@ public class Book {
 
     public String getDate() {
         return this.date;
-    }
-
-    public int getIndex() {
-        return this.index;
     }
 
     public boolean getCheckedStatus() {

@@ -8,12 +8,27 @@ public class Prompter {
     private Library library;
     public boolean quitMenu = false;
 
-    public Prompter(Library library){
+    public Prompter(Library library) {
         this.library = library;
     }
 
     public void displayWelcomeMessage() {
         System.out.println("Welcome to Biblioteca. Your one-stop shop for great book titles in Bangalore ! \n\n");
+    }
+
+    public void userInput() {
+        boolean acceptableInput = false;
+        while (!acceptableInput) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Choose an option: ");
+            try {
+                int input = Integer.parseInt(scanner.nextLine());
+                handleMenu(input);
+                acceptableInput = true;
+            } catch (IllegalArgumentException iae) {
+                System.out.println("Please enter a valid menu option");
+            }
+        }
     }
 
     public void displayMenu() {
@@ -22,40 +37,29 @@ public class Prompter {
         System.out.println("2. Check out book");
         System.out.println("3. Return book");
         System.out.println("4. Quit\n");
-        handleMenu();
+        userInput();
     }
 
-    public void handleMenu() {
-        boolean acceptableInput = false;
-        while(!acceptableInput) {
-            try{
-                Scanner scanner = new Scanner(System.in);
-                System.out.print("Choose an option: ");
-                int input = Integer.parseInt(scanner.nextLine());
-
-                switch(input) {
-                    case 1:
-                        acceptableInput = true;
-                        displayBooks();
-                        break;
-                    case 2:
-                        checkOutBook();
-                        break;
-                    case 3:
-                        checkInBook();
-                        break;
-                    case 4:
-                        quitMenu = true;
-                        System.out.println("\nThanks for using Biblioteca !");
-                        System.exit(0);
-                    default:
-                        System.out.println("Please select a valid option");
-                }
-            } catch (IllegalArgumentException iae) {
+    public void handleMenu(int input) {
+        switch (input) {
+            case 1:
+                displayBooks();
+                break;
+            case 2:
+                checkOutBook();
+                break;
+            case 3:
+                checkInBook();
+                break;
+            case 4:
+                quitMenu = true;
+                System.out.println("\nThanks for using Biblioteca !");
+                System.exit(0);
+            default:
                 System.out.println("Please select a valid option");
-            }
         }
-    }
+}
+
 
     public void displayBooks(){
         System.out.printf("%67s\n\n", "------ Available books ------");
