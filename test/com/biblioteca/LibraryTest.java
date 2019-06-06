@@ -10,14 +10,16 @@ import java.util.ArrayList;
 public class LibraryTest {
 
     private ArrayList<Book> testBooksArray;
+    private ArrayList<Movie> testMovieArray;
     private Library library;
 
     @BeforeEach
     public void setUp() {
         testBooksArray = new ArrayList<>();
+        testMovieArray = new ArrayList<>();
         testBooksArray.add(new Book("testAuthor", "testTitle", "testDate"));
         testBooksArray.add(new Book("testAuthorTwo", "testTitleTwo", "testDateTwo"));
-        library = new Library(testBooksArray);
+        library = new Library(testBooksArray, testMovieArray);
     }
 
     @Test

@@ -1,14 +1,17 @@
 package com.biblioteca;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
 public class Library {
 
     private ArrayList<Book> booksArray;
+    private ArrayList<Movie> filmArray;
 
-    public Library(ArrayList<Book> booksArray){
+    public Library(ArrayList<Book> booksArray, ArrayList<Movie> filmArray){
         this.booksArray = booksArray;
+        this.filmArray = filmArray;
     }
 
     public ArrayList<Book> getBooks(){

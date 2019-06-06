@@ -11,6 +11,13 @@ public class Prompter {
         this.library = library;
     }
 
+    public void start(){
+        displayWelcomeMessage();
+        while(!quitMenu) {
+            displayMenu();
+        }
+    }
+
     public void displayWelcomeMessage() {
         System.out.println("Welcome to Biblioteca. Your one-stop shop for great book titles in Bangalore ! \n\n");
     }
@@ -60,11 +67,11 @@ public class Prompter {
 }
 
     public void displayBooks(){
-        System.out.printf("%67s\n\n", "------ Available books ------");
-        System.out.printf("%-22s%-22s%-22s%-22s%-22s\n","*** Author ***", (""), "*** Title ***", (""), "*** Published ***");
+        System.out.printf("%80s\n\n", "-------- Available books --------");
+        System.out.printf("%-28s%-28s%-28s%-28s%-28s\n","*** Author ***", (""), "*** Title ***", (""), "*** Published ***");
         ArrayList<Book> booksArray = library.getBooks("available");
         for(Book book : booksArray){
-            System.out.printf("%-22s%-22s%-22s%-22s%-22s\n", book.getAuthor(),("|"),book.getTitle(), ("|"), book.getDate());
+            System.out.printf("%-28s%-28s%-28s%-28s%-28s\n", book.getAuthor(),("|"),book.getTitle(), ("|"), book.getDate());
         }
         System.out.println("\n");
     }
