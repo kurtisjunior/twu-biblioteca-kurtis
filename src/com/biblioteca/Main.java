@@ -10,11 +10,11 @@ public class Main {
         bookArray.add(new Book("Tim Ferriss", "Tribe of Mentors", "2017"));
         bookArray.add(new Book("Peter F. Ducker", "The Effective Executive", "1967"));
 
-        ArrayList<Movie> filmArray = new ArrayList<>();
-        filmArray.add(new Movie("Whiplash", "2014", "Damien Chazelle", "8.5"));
-        filmArray.add(new Movie("Blade Runner", "1982", "Ridley Scott", "8.2"));
+        ArrayList<Movie> movieArray = new ArrayList<>();
+        movieArray.add(new Movie("Whiplash", "2014", "Damien Chazelle", "8.5"));
+        movieArray.add(new Movie("Blade Runner", "1982", "Ridley Scott", "8.2"));
 
-        Library library = new Library(bookArray,filmArray);
+        Library library = new Library(bookArray,movieArray);
         Prompter prompter = new Prompter(library);
 
         prompter.start();

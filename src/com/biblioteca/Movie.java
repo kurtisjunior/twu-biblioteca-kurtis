@@ -5,6 +5,7 @@ public class Movie {
     private String year;
     private String director;
     private String rating;
+    private boolean checkedOut = false;
 
     public Movie(String name, String year, String director, String rating){
         this.name = name;
@@ -27,5 +28,25 @@ public class Movie {
 
     public String getRating() {
         return this.rating;
+    }
+
+
+    public boolean getCheckedStatus() {
+        return this.checkedOut;
+    }
+
+    public boolean setCheckedOut() {
+        if (!checkedOut) {
+            return checkedOut = true;
+        }
+        throw new IllegalArgumentException("\nSorry, that book is not available\n");
+    }
+
+    public boolean setCheckedIn() {
+        if (checkedOut) {
+            checkedOut = false;
+            return true;
+        }
+        throw new IllegalArgumentException("\nSorry, that book is already checked in\n");
     }
 }

@@ -40,9 +40,10 @@ public class Prompter {
     public void displayMenu() {
         System.out.println("Menu options: ");
         System.out.println("1. List of books");
-        System.out.println("2. Check out book");
-        System.out.println("3. Return book");
-        System.out.println("4. Quit\n");
+        System.out.println("2. List of movies");
+        System.out.println("3. Check out book");
+        System.out.println("4. Return book");
+        System.out.println("5. Quit\n");
         menuInput();
     }
 
@@ -52,12 +53,15 @@ public class Prompter {
                 displayBooks();
                 break;
             case 2:
-                checkOutBook();
+                displayMovies();
                 break;
             case 3:
-                checkInBook();
+                checkOutBook();
                 break;
             case 4:
+                checkInBook();
+                break;
+            case 5:
                 quitMenu = true;
                 System.out.println("\nThanks for using Biblioteca !");
                 System.exit(0);
@@ -72,6 +76,16 @@ public class Prompter {
         ArrayList<Book> booksArray = library.getBooks("available");
         for(Book book : booksArray){
             System.out.printf("%-28s%-28s%-28s%-28s%-28s\n", book.getAuthor(),("|"),book.getTitle(), ("|"), book.getDate());
+        }
+        System.out.println("\n");
+    }
+
+    public void displayMovies(){
+        System.out.printf("%100s\n\n", "-------- Available movies --------");
+        System.out.printf("%-28s%-28s%-28s%-28s%-28s%-28s%-28s\n","*** Name ***", (""), "*** Year ***", (""), "*** Director ***", (""), "*** Rating ***");
+        ArrayList<Movie> moviesArray = library.getMovies("available");
+        for(Movie movie : moviesArray){
+            System.out.printf("%-28s%-28s%-28s%-28s%-28s%-28s%-28s\n", movie.getName(),("|"),movie.getYear(), ("|"), movie.getDirector(), ("|"), movie.getRating());
         }
         System.out.println("\n");
     }

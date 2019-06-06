@@ -1,17 +1,16 @@
 package com.biblioteca;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
 public class Library {
 
     private ArrayList<Book> booksArray;
-    private ArrayList<Movie> filmArray;
+    private ArrayList<Movie> moviesArray;
 
-    public Library(ArrayList<Book> booksArray, ArrayList<Movie> filmArray){
+    public Library(ArrayList<Book> booksArray, ArrayList<Movie> moviesArray){
         this.booksArray = booksArray;
-        this.filmArray = filmArray;
+        this.moviesArray = moviesArray;
     }
 
     public ArrayList<Book> getBooks(){
@@ -28,6 +27,22 @@ public class Library {
             }
         }
         return availableBooks;
+    }
+
+    public ArrayList<Movie> getMovies(){
+        return this.moviesArray;
+    }
+
+    public ArrayList<Movie> getMovies(String filter) {
+        ArrayList<Movie> availableMovies = new ArrayList<>();
+        if(filter.equals("available")) {
+            for(Movie movie: moviesArray) {
+                if(!movie.getCheckedStatus()){
+                    availableMovies.add(movie);
+                }
+            }
+        }
+        return availableMovies;
     }
 
     public boolean checkOut(String checkedInput){

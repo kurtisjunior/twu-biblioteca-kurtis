@@ -10,20 +10,22 @@ import java.util.ArrayList;
 public class LibraryTest {
 
     private ArrayList<Book> testBooksArray;
-    private ArrayList<Movie> testMovieArray;
+    private ArrayList<Movie> testMoviesArray;
     private Library library;
 
     @BeforeEach
-    public void setUp() {
+    public void setUpBooks() {
         testBooksArray = new ArrayList<>();
-        testMovieArray = new ArrayList<>();
+        testMoviesArray = new ArrayList<>();
         testBooksArray.add(new Book("testAuthor", "testTitle", "testDate"));
         testBooksArray.add(new Book("testAuthorTwo", "testTitleTwo", "testDateTwo"));
-        library = new Library(testBooksArray, testMovieArray);
+        testMoviesArray.add(new Movie("testName", "testYear", "testDirector", "testRating"));
+        testMoviesArray.add(new Movie("testNameTwo", "testYearTwo", "testDirectorTwo", "testRatingTwo"));
+        library = new Library(testBooksArray, testMoviesArray);
     }
 
     @Test
-    public void LibraryReturnsAnArrayOfAllBooks() {
+    public void ReturnsAllBooks() {
         assertEquals(testBooksArray, library.getBooks());
     }
 
@@ -75,6 +77,11 @@ public class LibraryTest {
     public void userCanCheckInBookInAnyCase(){
         library.checkOut("testTitle");
         library.checkIn("TESTTITLE");
+    }
+
+    @Test
+    public void returnsAllMovies(){
+        assertEquals(testMoviesArray, library.getMovies());
     }
 }
 
