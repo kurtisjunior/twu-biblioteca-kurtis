@@ -42,7 +42,7 @@ public class Book {
         if (!checkedOut) {
             return checkedOut = true;
         }
-        throw new IllegalArgumentException("Sorry, that book is not available\n");
+        throw new IllegalArgumentException("\nSorry, that book is not available\n");
     }
 
     public boolean setCheckedIn() {
@@ -50,7 +50,7 @@ public class Book {
             checkedOut = false;
             return true;
         }
-        throw new IllegalArgumentException("Sorry, that book is already checked in\n");
+        throw new IllegalArgumentException("\nSorry, that book is already checked in\n");
     }
 
 }
