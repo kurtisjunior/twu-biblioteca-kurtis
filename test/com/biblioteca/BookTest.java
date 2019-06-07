@@ -32,7 +32,7 @@ public class BookTest {
         testBook.checkOut();
         Throwable checkedOutIae = assertThrows(IllegalArgumentException.class, () ->
             testBook.checkOut());
-        assertEquals("\nSorry, that book is not available\n", checkedOutIae.getMessage());
+        assertEquals("\nSorry, that book is not available", checkedOutIae.getMessage());
     }
 
 
@@ -47,7 +47,7 @@ public class BookTest {
     public void throwsIllegalArgumentExceptionWhenBookAlreadyCheckedIn() {
         Throwable checkedInIae = assertThrows(IllegalArgumentException.class, () ->
                 testBook.checkIn());
-        assertEquals("\nSorry, that book is already checked in\n", checkedInIae.getMessage());
+        assertEquals("\nSorry, that book is already checked in", checkedInIae.getMessage());
     }
 
 }
