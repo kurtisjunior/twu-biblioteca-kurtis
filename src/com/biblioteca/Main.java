@@ -28,16 +28,10 @@ public class Main {
 
 
 /*
-Book
-checkedUser = ""
-
-Library
-checkedBooks method
-    Iterates through books
-    builds an array of checked books  -----> uses the method already made
-    displays checked books
-
-
-
-
+1. Run tests
+2. Add checked books to menu option
+    iterate through books
+    display eveything + who has checked out the book
+3. continue with last card
+4. refactor the menu's
  */

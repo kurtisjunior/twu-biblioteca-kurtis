@@ -105,6 +105,7 @@ public class LibraryTest  {
         ArrayList<Book> availableBooks = library.getBooks("checked");
 
         assertEquals(1, availableBooks.size());
+        assertEquals("testAuthor", availableBooks.get(0).getAuthor());
     }
 }
 
