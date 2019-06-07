@@ -23,4 +23,9 @@ class UserTest {
         assertEquals("test", testUser.getPassword());
     }
 
+    @Test
+    public void returnsLoggedInStatus(){
+        assertFalse(testUser.loggedInStatus());
+    }
+
 }

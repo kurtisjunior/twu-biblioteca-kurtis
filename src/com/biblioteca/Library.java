@@ -7,10 +7,12 @@ public class Library {
 
     private ArrayList<Book> booksArray;
     private ArrayList<Movie> moviesArray;
+    private ArrayList<User> userArray;
 
-    public Library(ArrayList<Book> booksArray, ArrayList<Movie> moviesArray){
+    public Library(ArrayList<Book> booksArray, ArrayList<Movie> moviesArray, ArrayList<User> userArray){
         this.booksArray = booksArray;
         this.moviesArray = moviesArray;
+        this.userArray = userArray;
     }
 
     public ArrayList<Book> getBooks(){
@@ -22,6 +24,12 @@ public class Library {
         if(filter.equals("available")) {
             for(Book book : booksArray) {
                 if(!book.getCheckedStatus()){
+                    availableBooks.add(book);
+                }
+            }
+        } else if(filter.equals("checked")){
+            for(Book book : booksArray) {
+                if(book.getCheckedStatus()){
                     availableBooks.add(book);
                 }
             }
@@ -93,5 +101,16 @@ public class Library {
             }
         }
         return lowerCase;
+    }
+
+    public Boolean userLogIn(String libraryNumber, String password){
+        for(User user : userArray){
+            if(user.getLibraryNumber().equals(libraryNumber)){
+                if(user.getPassword().equals(password)) {
+                    return true;
+                }
+            }
+        }
+        throw new IllegalArgumentException("\nlogin failed, incorrect library number or password\n");
     }
 }

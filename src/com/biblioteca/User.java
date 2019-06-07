@@ -4,10 +4,12 @@ public class User {
 
     private String libraryNumber;
     private String password;
+    private boolean loggedIn;
 
     public User (String libraryNumber, String password){
         this.libraryNumber = libraryNumber;
         this.password = password;
+        this.loggedIn = false;
     }
 
     public String getLibraryNumber(){
@@ -16,6 +18,10 @@ public class User {
 
     public String getPassword(){
         return this.password;
+    }
+
+    public Boolean loggedInStatus(){
+        return this.loggedIn;
     }
 
 }

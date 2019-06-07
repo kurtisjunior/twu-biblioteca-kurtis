@@ -42,7 +42,7 @@ public class Prompter {
         for(String option : menuOptions) {
             System.out.println(option);
         }
-        System.out.println("\n");
+        System.out.print("\n");
         menuInput();
     }
 
@@ -55,16 +55,16 @@ public class Prompter {
                 displayMovies();
                 break;
             case 3:
-                checkOutItem("book");
+                validateUserCredentials("book", "check out");
                 break;
             case 4:
-                checkOutItem("movie");
+                validateUserCredentials("movie", "check out");
                 break;
             case 5:
-                checkInItem("book");
+                validateUserCredentials("book", "check in");
                 break;
             case 6:
-                checkInItem("movie");
+                validateUserCredentials("movie", "check in");
                 break;
             case 7:
                 quitMenu = true;
@@ -96,20 +96,42 @@ public class Prompter {
     }
 
 
-    public String getUserInput() {
+    public String getUserInput(String inputType) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the title: ");
+        System.out.print( inputType == "libraryNumber" ? "Enter library number: " : inputType == "password" ? "Enter password: " : "Enter title: ");
         String input = (scanner.nextLine());
         return input;
     }
 
+    public void validateUserCredentials(String type, String action){
+        Boolean success = false;
+        String libraryNumber = getUserInput("libraryNumber");
+        String password = getUserInput("password");
+        try{
+            success = library.userLogIn(libraryNumber, password);
+
+        }catch(IllegalArgumentException iae){
+            System.out.println(iae.getMessage());
+        }
+        //switch statement refactor
+        if(success && type == "book" && action == "check out"){
+            checkOutItem(type);
+        } else if (success && type == "movie" && action == "check out"){
+            checkOutItem(type);
+        } else if (success && type == "book" && action == "check in"){
+            checkInItem(type);
+        } else if (success && type == "movie" && action == "check in"){
+            checkInItem(type);
+        }
+    }
+
     public void checkOutItem(String type){
-        String input = getUserInput();
+        String input = getUserInput("title");
         if(type.equals("book")) checkOut(input, "book"); else checkOut(input, "movie");
     }
 
     public void checkInItem(String type){
-        String input = getUserInput();
+        String input = getUserInput("title");
         if(type.equals("book")) checkIn(input, "book"); else checkIn(input, "movie");
     }
 

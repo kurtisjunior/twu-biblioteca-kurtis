@@ -47,6 +47,6 @@ public class Movie {
             checkedOut = false;
             return true;
         }
-        throw new IllegalArgumentException("\nSorry, that movie is already checked in\n");
+        throw new IllegalArgumentException("\nSorry, that movie is already checked in");
     }
 }

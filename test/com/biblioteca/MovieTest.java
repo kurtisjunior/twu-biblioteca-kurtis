@@ -46,8 +46,9 @@ class MovieTest {
     public void throwsIllegalArgumentExceptionWhenBookAlreadyCheckedIn() {
         Throwable checkedInIae = assertThrows(IllegalArgumentException.class, () ->
                 testMovie.checkIn());
-        assertEquals("\nSorry, that movie is already checked in\n", checkedInIae.getMessage());
+        assertEquals("\nSorry, that movie is already checked in", checkedInIae.getMessage());
     }
+
 
 
 }

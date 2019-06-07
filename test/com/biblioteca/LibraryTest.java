@@ -11,17 +11,20 @@ public class LibraryTest  {
 
     private ArrayList<Book> testBooksArray;
     private ArrayList<Movie> testMoviesArray;
+    private ArrayList<User> testUserArray;
     private Library library;
 
     @BeforeEach
     public void setUpBooks() {
         testBooksArray = new ArrayList<>();
         testMoviesArray = new ArrayList<>();
+        testUserArray = new ArrayList<>();
         testBooksArray.add(new Book("testAuthor", "testTitle", "testDate"));
         testBooksArray.add(new Book("testAuthorTwo", "testTitleTwo", "testDateTwo"));
         testMoviesArray.add(new Movie("testName", "testYear", "testDirector", "testRating"));
         testMoviesArray.add(new Movie("testNameTwo", "testYearTwo", "testDirectorTwo", "testRatingTwo"));
-        library = new Library(testBooksArray, testMoviesArray);
+        testUserArray.add(new User("000-0000", "testPassword"));
+        library = new Library(testBooksArray, testMoviesArray, testUserArray);
     }
 
     @Test
@@ -83,7 +86,28 @@ public class LibraryTest  {
     public void returnsAllMovies(){
         assertEquals(testMoviesArray, library.getMovies());
     }
+
+    @Test
+    public void userCanLogIn(){
+        assertTrue(library.userLogIn("000-0000", "testPassword"));
+    }
+
+    @Test
+    public void throwsIllegalArgumentExceptionWhenUsernameOrPasswordIsIncorrect(){
+        Throwable credentialIae = assertThrows(IllegalArgumentException.class, () ->
+                library.userLogIn("000-0001", "testPassword"));
+        assertEquals("\nlogin failed, incorrect library number or password\n", credentialIae.getMessage());
+    }
+
+    @Test
+    public void returnsCheckedOutBooks(){
+        library.bookAction("testTitle", "check out");
+        ArrayList<Book> availableBooks = library.getBooks("checked");
+
+        assertEquals(1, availableBooks.size());
+    }
 }
+
 
 
 

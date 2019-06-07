@@ -50,5 +50,10 @@ public class BookTest {
         assertEquals("\nSorry, that book is already checked in", checkedInIae.getMessage());
     }
 
+    @Test
+    public void recordsUserWhoHasCheckedOutTheBook(){
+        testBook.setCheckedOutUser("000-0000");
+    }
+
 }
 

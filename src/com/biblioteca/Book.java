@@ -4,6 +4,7 @@ public class Book {
     private String author;
     private String title;
     private String date;
+    private String checkedOutUser = "";
     private boolean checkedOut = false;
 
     public Book(String author, String title, String date) {
@@ -26,6 +27,10 @@ public class Book {
 
     public boolean getCheckedStatus() {
         return this.checkedOut;
+    }
+
+    public void setCheckedOutUser(String user){
+        checkedOutUser = user;
     }
 
     public boolean checkOut() {

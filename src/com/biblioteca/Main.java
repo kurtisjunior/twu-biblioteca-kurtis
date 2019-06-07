@@ -14,7 +14,10 @@ public class Main {
         movieArray.add(new Movie("Whiplash", "2014", "Damien Chazelle", "8.5"));
         movieArray.add(new Movie("Blade Runner", "1982", "Ridley Scott", "8.2"));
 
-        Library library = new Library(bookArray, movieArray);
+        ArrayList<User> userArray = new ArrayList<>();
+        userArray.add(new User("0", "k"));
+
+        Library library = new Library(bookArray, movieArray, userArray);
         Prompter prompter = new Prompter(library);
 
         prompter.start();
@@ -24,3 +27,17 @@ public class Main {
 
 
 
+/*
+Book
+checkedUser = ""
+
+Library
+checkedBooks method
+    Iterates through books
+    builds an array of checked books  -----> uses the method already made
+    displays checked books
+
+
+
+
+ */
