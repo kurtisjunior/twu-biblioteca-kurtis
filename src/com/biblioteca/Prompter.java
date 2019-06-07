@@ -19,7 +19,7 @@ public class Prompter {
     }
 
     public void displayWelcomeMessage() {
-        System.out.println("Welcome to Biblioteca. Your one-stop shop for great book titles in Bangalore ! \n\n");
+        System.out.printf("\n%120s", "**** Welcome to Biblioteca. Your one-stop shop for great book titles in Bangalore ! **** \n\n");
     }
 
     public void menuInput() {
@@ -38,7 +38,7 @@ public class Prompter {
     }
 
     public void displayMenu() {
-        String [] menuOptions = {"Menu Options: ", "1. List of books", "2. List of movies", "3. Check out book", "4. Check out movie", "5. Return book", "6. Quit"};
+        String [] menuOptions = {"Menu Options: ", "1. List of books", "2. List of movies", "3. Check out book", "4. Check out movie","5. check in book", "6. check in movie", "7. Return book", "8. Quit"};
         for(String option : menuOptions) {
             System.out.println(option);
         }
@@ -61,9 +61,12 @@ public class Prompter {
                 checkOutItem("movie");
                 break;
             case 5:
-                checkInBook();
+                checkInItem("book");
                 break;
             case 6:
+                checkInItem("movie");
+                break;
+            case 7:
                 quitMenu = true;
                 System.out.println("\nThanks for using Biblioteca !");
                 System.exit(0);
@@ -105,6 +108,11 @@ public class Prompter {
         if(type.equals("book")) checkOutBook(input); else checkOutMovie(input);
     }
 
+    public void checkInItem(String type){
+        String input = getUserInput();
+        if(type.equals("book")) checkInBook(input); else checkInMovie(input);
+    }
+
     public void checkOutBook(String input) {
         boolean success = false;
         try {
@@ -117,9 +125,8 @@ public class Prompter {
         }
     }
 
-    public void checkInBook() {
+    public void checkInBook(String input) {
         boolean success = false;
-        String input = getUserInput();
         try {
             success = library.checkInBook(input);
         } catch (IllegalArgumentException iae) {
@@ -140,6 +147,17 @@ public class Prompter {
         if(success){
             System.out.println("\nSuccessfully checked out. Thank you ! Enjoy the movie \n");
         }
+    }
 
+    public void checkInMovie(String input) {
+        boolean success = false;
+        try {
+            success = library.checkInMovie(input);
+        } catch (IllegalArgumentException iae) {
+            System.out.println(iae.getMessage());
+        }
+        if(success) {
+            System.out.println("\nSuccessfully returned. Thank you !\n ");
+        }
     }
 }
