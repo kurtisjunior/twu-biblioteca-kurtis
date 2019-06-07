@@ -38,7 +38,7 @@ public class Prompter {
     }
 
     public void displayMenu() {
-        String [] menuOptions = {"Menu Options: ", "1. List of books", "2. List of movies", "3. Check out book", "4. Check out movie","5. check in book", "6. check in movie", "7. Return book", "8. Quit"};
+        String [] menuOptions = {"Menu Options: ", "1. List of books", "2. List of movies", "3. Check out book", "4. Check out movie","5. Check in book", "6. Check in movie", "7. Return book", "8. Quit"};
         for(String option : menuOptions) {
             System.out.println(option);
         }
@@ -116,7 +116,7 @@ public class Prompter {
     public void checkOut(String input, String type){
         boolean success = false;
         try{
-            success = (type.equals("book")) ? library.checkOutBook(input) : library.checkOutMovie(input);
+            success = (type.equals("book")) ? library.bookAction(input, "check out") : library.movieAction(input, "check out");
         } catch(IllegalArgumentException iae) {
             System.out.println(iae.getMessage());
         }
@@ -126,7 +126,7 @@ public class Prompter {
     public void checkIn(String input, String type){
         boolean success = false;
         try{
-            success = (type.equals("book")) ? library.checkInBook(input) : library.checkInMovie(input);
+            success = (type.equals("book")) ? library.bookAction(input, "check in") : library.movieAction(input, "check in");
         } catch (IllegalArgumentException iae){
             System.out.println(iae.getMessage());
         }

@@ -64,43 +64,24 @@ public class Library {
         throw new IllegalArgumentException("The book you have selected does not exist, please try again\n\n");
     }
 
-
-    public boolean checkOutMovie(String checkedInput){
-        for(Movie movie : moviesArray) {
+    public boolean movieAction(String checkedInput, String action){
+        for (Movie movie : moviesArray){
+            String formatInput = toLowerCase(checkedInput);
+            String formatTitle = toLowerCase(movie.getName());
+            Boolean match = formatInput.equals(formatTitle);
             try{
-                String formatInput = toLowerCase(checkedInput);
-                String formatTitle = toLowerCase(movie.getName());
-
-                if(formatInput.equals(formatTitle)){
+                if(match && action == "check out"){
                     return movie.checkOut();
+                } else if (match && action == "check in") {
+                    return movie.checkIn();
                 }
-
-            } catch (IllegalArgumentException iae) {
+            } catch (IllegalArgumentException iae){
                 System.out.println(iae.getMessage());
                 return false;
             }
         }
         throw new IllegalArgumentException("The movie you have selected does not exist, please try again\n\n");
-
     }
-
-    public boolean checkInMovie(String checkedInput){
-        for(Movie movie : moviesArray){
-            try{
-                String formatInput = toLowerCase(checkedInput);
-                String formatTitle = toLowerCase(movie.getName());
-
-                if(formatInput.equals(formatTitle)){
-                    return movie.checkIn();
-                }
-            } catch(IllegalArgumentException iae){
-                System.out.println(iae.getMessage());
-                return false;
-            }
-        }
-        throw new IllegalArgumentException("The movie you have selected does not exist");
-    }
-
 
     public String toLowerCase(String checkedInput){
         String lowerCase = "";
