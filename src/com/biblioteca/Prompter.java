@@ -38,13 +38,11 @@ public class Prompter {
     }
 
     public void displayMenu() {
-        System.out.println("Menu options: ");
-        System.out.println("1. List of books");
-        System.out.println("2. List of movies");
-        System.out.println("3. Check out book");
-        System.out.println("4. Check out movie");
-        System.out.println("6. Return book");
-        System.out.println("7. Quit\n");
+        String [] menuOptions = {"Menu Options: ", "1. List of books", "2. List of movies", "3. Check out book", "4. Check out movie", "5. Return book", "6. Quit"};
+        for(String option : menuOptions) {
+            System.out.println(option);
+        }
+        System.out.println("\n");
         menuInput();
     }
 
