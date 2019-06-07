@@ -120,7 +120,7 @@ public class Prompter {
         } catch(IllegalArgumentException iae) {
             System.out.println(iae.getMessage());
         }
-        System.out.println(((success) && type == "book") ? "\nSuccessfully checked out. Thank you ! Enjoy the book\n" : (success) ? "Successfully checked out. Thank you ! Enjoy the movie" : "\n");
+        System.out.println(((success) && type == "book") ? "\nSuccessfully checked out. Thank you ! Enjoy the book\n" : (success) ? "\nSuccessfully checked out. Thank you ! Enjoy the movie\n" : "\n");
     }
 
     public void checkIn(String input, String type){
