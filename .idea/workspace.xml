@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba8a9a34-98b4-4db4-97ff-6cca61955f0f" name="Default Changelist" comment="">
+    <list default="true" id="ba8a9a34-98b4-4db4-97ff-6cca61955f0f" name="Default Changelist" comment="user can only check in their own books">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/biblioteca/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/biblioteca/Library.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/biblioteca/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/biblioteca/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/com/biblioteca/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/biblioteca/LibraryTest.java" afterDir="false" />
     </list>
@@ -20,11 +21,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+            <state relative-caret-position="353">
+              <caret line="35" column="63" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Library.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="94" column="53" lean-forward="true" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -64,13 +74,13 @@
         <option value="$PROJECT_DIR$/src/com/biblioteca/User.java" />
         <option value="$PROJECT_DIR$/test/com/biblioteca/UserTest.java" />
         <option value="$PROJECT_DIR$/src/com/biblioteca/Movie.java" />
-        <option value="$PROJECT_DIR$/src/com/biblioteca/Prompter.java" />
         <option value="$PROJECT_DIR$/test/com/biblioteca/MovieTest.java" />
         <option value="$PROJECT_DIR$/src/com/biblioteca/Book.java" />
         <option value="$PROJECT_DIR$/test/com/biblioteca/BookTest.java" />
-        <option value="$PROJECT_DIR$/src/com/biblioteca/Library.java" />
+        <option value="$PROJECT_DIR$/src/com/biblioteca/Prompter.java" />
         <option value="$PROJECT_DIR$/test/com/biblioteca/LibraryTest.java" />
         <option value="$PROJECT_DIR$/src/com/biblioteca/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/biblioteca/Library.java" />
       </list>
     </option>
   </component>
@@ -79,7 +89,7 @@
       <run-configuration type="JUnit" name="All in twu-biblioteca-kurtis-master" />
     </enabled-run-configurations>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
@@ -110,6 +120,11 @@
               <item name="twu-biblioteca-kurtis-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="biblioteca" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="twu-biblioteca-kurtis-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="twu-biblioteca-kurtis-master" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -165,7 +180,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LibraryTest.returnsCheckedOutBooks">
+  <component name="RunManager" selected="JUnit.All in twu-biblioteca-kurtis-master">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.biblioteca.Main" />
       <module name="twu-biblioteca-kurtis-master" />
@@ -234,7 +249,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibraryTest.throwsIllegalArgumentExceptionWhenUsernameOrPasswordIsIncorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibraryTest.throwsIllegalArgumentExceptionWhenUserChecksInABookByAnotherUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="twu-biblioteca-kurtis-master" />
       <extension name="coverage">
         <pattern>
@@ -244,13 +259,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.biblioteca.LibraryTest" />
-      <option name="METHOD_NAME" value="throwsIllegalArgumentExceptionWhenUsernameOrPasswordIsIncorrect" />
+      <option name="METHOD_NAME" value="throwsIllegalArgumentExceptionWhenUserChecksInABookByAnotherUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibraryTest.userCanLogIn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibraryTest.userCanCheckInBookInAnyCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="twu-biblioteca-kurtis-master" />
       <extension name="coverage">
         <pattern>
@@ -260,7 +275,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.biblioteca" />
       <option name="MAIN_CLASS_NAME" value="com.biblioteca.LibraryTest" />
-      <option name="METHOD_NAME" value="userCanLogIn" />
+      <option name="METHOD_NAME" value="userCanCheckInBookInAnyCase" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -269,19 +284,19 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.All in twu-biblioteca-kurtis-master" />
-      <item itemvalue="JUnit.LibraryTest" />
-      <item itemvalue="JUnit.LibraryTest.userCanLogIn" />
-      <item itemvalue="JUnit.LibraryTest.throwsIllegalArgumentExceptionWhenUsernameOrPasswordIsIncorrect" />
       <item itemvalue="JUnit.BookTest.recordsUserWhoHasCheckedOutTheBook" />
       <item itemvalue="JUnit.LibraryTest.returnsCheckedOutBooks" />
+      <item itemvalue="JUnit.LibraryTest.throwsIllegalArgumentExceptionWhenUserChecksInABookByAnotherUser" />
+      <item itemvalue="JUnit.LibraryTest" />
+      <item itemvalue="JUnit.LibraryTest.userCanCheckInBookInAnyCase" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LibraryTest.userCanCheckInBookInAnyCase" />
+        <item itemvalue="JUnit.LibraryTest" />
+        <item itemvalue="JUnit.LibraryTest.throwsIllegalArgumentExceptionWhenUserChecksInABookByAnotherUser" />
         <item itemvalue="JUnit.LibraryTest.returnsCheckedOutBooks" />
         <item itemvalue="JUnit.BookTest.recordsUserWhoHasCheckedOutTheBook" />
-        <item itemvalue="JUnit.LibraryTest.throwsIllegalArgumentExceptionWhenUsernameOrPasswordIsIncorrect" />
-        <item itemvalue="JUnit.LibraryTest.userCanLogIn" />
-        <item itemvalue="JUnit.LibraryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -506,56 +521,70 @@
       <option name="project" value="LOCAL" />
       <updated>1559923052233</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="login before check in or check out added">
+      <created>1559923262547</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1559923262547</updated>
+    </task>
+    <task id="LOCAL-00032" summary="list of checked out books added">
+      <created>1559979453392</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1559979453392</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.06.07 at 15h 52m 52s.xml">
+    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.06.08 at 08h 07m 50s.xml">
       <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.06.07 at 15h 53m 36s.xml">
+    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.06.08 at 08h 11m 24s.xml">
       <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.06.07 at 16h 05m 43s.xml">
+    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.06.08 at 08h 30m 45s.xml">
       <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.06.07 at 16h 06m 22s.xml">
+    <history-entry file="LibraryTest_throwsIllegalArgumentExceptionWhenUserChecksInABookByAnotherUser - 2019.06.08 at 09h 22m 42s.xml">
+      <configuration name="LibraryTest.throwsIllegalArgumentExceptionWhenUserChecksInABookByAnotherUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LibraryTest - 2019.06.08 at 09h 24m 21s.xml">
+      <configuration name="LibraryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LibraryTest - 2019.06.08 at 09h 25m 06s.xml">
+      <configuration name="LibraryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LibraryTest_userCanCheckInBookInAnyCase - 2019.06.08 at 09h 27m 09s.xml">
+      <configuration name="LibraryTest.userCanCheckInBookInAnyCase" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.06.08 at 09h 30m 08s.xml">
       <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.06.07 at 16h 06m 37s.xml">
+    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.06.08 at 09h 31m 29s.xml">
       <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.06.07 at 16h 18m 57s.xml">
+    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.06.08 at 09h 33m 40s.xml">
       <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.06.07 at 16h 19m 25s.xml">
-      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_twu-biblioteca-kurtis-master - 2019.06.07 at 16h 48m 27s.xml">
-      <configuration name="All in twu-biblioteca-kurtis-master" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LibraryTest_returnsCheckedOutBooks - 2019.06.07 at 16h 56m 35s.xml">
-      <configuration name="LibraryTest.returnsCheckedOutBooks" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LibraryTest_returnsCheckedOutBooks - 2019.06.07 at 16h 58m 43s.xml">
-      <configuration name="LibraryTest.returnsCheckedOutBooks" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4981685" visible="true" weight="0.13590844" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4981685" visible="true" weight="0.13590844" />
       <window_info id="Structure" order="1" sideWeight="0.50183153" side_tool="true" weight="0.2532189" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.50183153" side_tool="true" weight="0.2532189" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.43975905" />
+      <window_info active="true" anchor="bottom" id="Messages" order="0" visible="true" weight="0.28025478" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.07388535" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.33012047" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.37070063" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -667,8 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Menu added" />
-    <MESSAGE value="Book numbers added for checkout" />
     <MESSAGE value="book class updated with check out method" />
     <MESSAGE value="jupiter does not exist" />
     <MESSAGE value="test suite fix filtered method added" />
@@ -692,7 +719,9 @@
     <MESSAGE value="library check in and check out movie methods refactored to generic method" />
     <MESSAGE value="user added" />
     <MESSAGE value="login before check in or check out added" />
-    <option name="LAST_COMMIT_MESSAGE" value="login before check in or check out added" />
+    <MESSAGE value="list of checked out books added" />
+    <MESSAGE value="user can only check in their own books" />
+    <option name="LAST_COMMIT_MESSAGE" value="user can only check in their own books" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Biblioteca.class" />
@@ -759,27 +788,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="315">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="e#756#757#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/biblioteca/BookTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="53" column="22" lean-forward="true" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+        <state relative-caret-position="413">
+          <caret line="30" column="9" lean-forward="true" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1567#1568#0" expanded="true" />
-            <element signature="e#1590#1591#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Prompter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-246">
-          <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+        <state relative-caret-position="361">
+          <caret line="142" column="35" selection-start-line="142" selection-start-column="35" selection-end-line="142" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#208#209#0" expanded="true" />
@@ -788,31 +819,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Library.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-611">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#1014#1015#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/biblioteca/LibraryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="101" column="9" lean-forward="true" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
+        <state relative-caret-position="159">
+          <caret line="62" column="60" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1303#1304#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+        <state relative-caret-position="353">
+          <caret line="35" column="63" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/biblioteca/Library.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="94" column="53" lean-forward="true" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
         </state>
       </provider>
     </entry>

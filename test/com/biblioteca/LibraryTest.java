@@ -19,11 +19,15 @@ public class LibraryTest  {
         testBooksArray = new ArrayList<>();
         testMoviesArray = new ArrayList<>();
         testUserArray = new ArrayList<>();
+
         testBooksArray.add(new Book("testAuthor", "testTitle", "testDate"));
         testBooksArray.add(new Book("testAuthorTwo", "testTitleTwo", "testDateTwo"));
+
         testMoviesArray.add(new Movie("testName", "testYear", "testDirector", "testRating"));
         testMoviesArray.add(new Movie("testNameTwo", "testYearTwo", "testDirectorTwo", "testRatingTwo"));
+
         testUserArray.add(new User("000-0000", "testPassword"));
+        testUserArray.add(new User("000-0001", "testPasswordTwo"));
         library = new Library(testBooksArray, testMoviesArray, testUserArray);
     }
 
@@ -55,8 +59,8 @@ public class LibraryTest  {
 
     @Test
     public void userCanCheckInBook(){
-        library.bookAction("testTitle", "check in", "0");
-        assertTrue(library.bookAction("testTitle", "check out", "0"));
+        library.bookAction("testTitle", "check out", "000-0000");
+        assertTrue(library.bookAction("testTitle", "check in", "000-0000"));
     }
 
     @Test
@@ -78,8 +82,8 @@ public class LibraryTest  {
 
     @Test
     public void userCanCheckInBookInAnyCase(){
-        library.bookAction("testTitle", "check out", "0");
-        library.bookAction("TESTTITLE", "check in", "0");
+        library.bookAction("testTitle", "check out", "000-0000");
+        library.bookAction("TESTTITLE", "check in", "000-0000");
     }
 
     @Test
@@ -106,6 +110,15 @@ public class LibraryTest  {
 
         assertEquals(1, availableBooks.size());
         assertEquals("testAuthor", availableBooks.get(0).getAuthor());
+    }
+
+    @Test
+    public void throwsIllegalArgumentExceptionWhenUserChecksInABookByAnotherUser(){
+        library.bookAction("testTitle", "check out", "000-0000");
+        Throwable incorrectBookIae = assertThrows(IllegalArgumentException.class, () ->
+                library.bookAction("testTitle", "check in", "000-0001")
+        );
+        assertEquals("The book you have selected does not exist, please try again\n\n", incorrectBookIae.getMessage());
     }
 }
 

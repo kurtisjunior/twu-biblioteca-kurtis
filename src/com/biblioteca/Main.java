@@ -29,7 +29,13 @@ public class Main {
 
 
 /*
-1. User should only be able to check out or check in their own book !
-2. refactor the menu layout
-3. refactor spacing
+1. User should only be able to check out or check in their own book ! X
+    // specific IAE rather than "book doesn't exist"?
+
+2. Customer log in (last card)
+    Log in at the start to check in and check out and view info
+    Log in every time to check in check out and view info
+
+3. refactor the menu layout
+4. refactor spacing
  */

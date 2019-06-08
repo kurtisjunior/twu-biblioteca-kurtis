@@ -58,13 +58,16 @@ public class Library {
         for(Book book : booksArray){
             String formatInput = toLowerCase(checkedInput);
             String formatTitle = toLowerCase(book.getTitle());
-            Boolean match = formatInput.equals(formatTitle);
+
+            Boolean titleMatch = formatInput.equals(formatTitle);
+            Boolean bookMatch = libraryNumber.equals(book.getCheckedOutUser());
+
             try{
-                if(match && action == "check out") {
+                if(titleMatch && action.equals("check out")) {
                     book.checkOut();
                     book.setCheckedOutUser(libraryNumber);
                     return true;
-                } else if (match && action == "check in") {
+                } else if (titleMatch && bookMatch && action.equals("check in")) {
                     book.checkIn();
                     book.setCheckedOutUser("");
                     return true;
@@ -83,9 +86,9 @@ public class Library {
             String formatTitle = toLowerCase(movie.getName());
             Boolean match = formatInput.equals(formatTitle);
             try{
-                if(match && action == "check out"){
+                if(match && action.equals("check out")){
                     return movie.checkOut();
-                } else if (match && action == "check in") {
+                } else if (match && action.equals("check in")) {
                     return movie.checkIn();
                 }
             } catch (IllegalArgumentException iae){
