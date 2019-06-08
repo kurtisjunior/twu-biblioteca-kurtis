@@ -10,17 +10,15 @@ class UserTest {
 
     @BeforeEach
     public void setUp(){
-        testUser = new User("000-0000", "test");
+        testUser = new User("000-0000", "test", "testName", "testEmail", "testNumber");
     }
 
     @Test
-    public void returnsUserLibraryNumber(){
+    public void returnsProperties(){
         assertEquals("000-0000", testUser.getLibraryNumber());
-    }
-
-    @Test
-    public void returnsUserPassword(){
         assertEquals("test", testUser.getPassword());
+        assertEquals("testName", testUser.getName());
+        assertEquals("testNumber", testUser.getNumber());
     }
 
     @Test

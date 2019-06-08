@@ -26,8 +26,8 @@ public class LibraryTest  {
         testMoviesArray.add(new Movie("testName", "testYear", "testDirector", "testRating"));
         testMoviesArray.add(new Movie("testNameTwo", "testYearTwo", "testDirectorTwo", "testRatingTwo"));
 
-        testUserArray.add(new User("000-0000", "testPassword"));
-        testUserArray.add(new User("000-0001", "testPasswordTwo"));
+        testUserArray.add(new User("000-0000", "testPassword", "testName", "testEmail", "testNumber"));
+        testUserArray.add(new User("000-0001", "testPasswordTwo", "testNameTwo", "testEmailTwo", "testNumberTwo"));
         library = new Library(testBooksArray, testMoviesArray, testUserArray);
     }
 
