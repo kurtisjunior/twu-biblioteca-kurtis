@@ -16,6 +16,7 @@ public class Main {
 
         ArrayList<User> userArray = new ArrayList<>();
         userArray.add(new User("0", "k"));
+        userArray.add(new User("1", "a"));
 
         Library library = new Library(bookArray, movieArray, userArray);
         Prompter prompter = new Prompter(library);
@@ -28,10 +29,7 @@ public class Main {
 
 
 /*
-1. Run tests
-2. Add checked books to menu option
-    iterate through books
-    display eveything + who has checked out the book
-3. continue with last card
-4. refactor the menu's
+1. User should only be able to check out or check in their own book !
+2. refactor the menu layout
+3. refactor spacing
  */

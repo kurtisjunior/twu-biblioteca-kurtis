@@ -38,7 +38,7 @@ public class Prompter {
     }
 
     public void displayMenu() {
-        String [] menuOptions = {"Menu Options: ", "1. List of books", "2. List of movies", "3. Check out book", "4. Check out movie","5. Check in book", "6. Check in movie", "7. Return book", "8. Quit"};
+        String [] menuOptions = {"Menu Options: ", "1. List of books", "2. List of movies", "3. Check out book", "4. Check out movie","5. Return book", "6. Return movie", "7. Checked out books", "8. Quit"};
         for(String option : menuOptions) {
             System.out.println(option);
         }
@@ -49,7 +49,7 @@ public class Prompter {
     public void handleMenu(int input) {
         switch (input) {
             case 1:
-                displayBooks();
+                displayAvailableBooks();
                 break;
             case 2:
                 displayMovies();
@@ -67,6 +67,9 @@ public class Prompter {
                 validateUserCredentials("movie", "check in");
                 break;
             case 7:
+                displayCheckedBooks();
+                break;
+            case 8:
                 quitMenu = true;
                 System.out.println("\nThanks for using Biblioteca !");
                 System.exit(0);
@@ -75,12 +78,22 @@ public class Prompter {
         }
 }
 
-    public void displayBooks(){
+    public void displayAvailableBooks(){
         System.out.printf("%80s\n\n", "-------- Available books --------");
         System.out.printf("%-28s%-28s%-28s%-28s%-28s\n","*** Author ***", (""), "*** Title ***", (""), "*** Published ***");
         ArrayList<Book> booksArray = library.getBooks("available");
         for(Book book : booksArray){
             System.out.printf("%-28s%-28s%-28s%-28s%-28s\n", book.getAuthor(),("|"),book.getTitle(), ("|"), book.getDate());
+        }
+        System.out.println("\n");
+    }
+
+    public void displayCheckedBooks(){
+        System.out.printf("%100s\n\n", "-------- Checked out books --------");
+        System.out.printf("%-28s%-28s%-28s%-28s%-28s%-28s%-28s\n","*** Author ***", (""), "*** Title ***", (""), "*** Published ***", (""), "*** User ***");
+        ArrayList<Book> booksArray = library.getBooks("checked");
+        for(Book book : booksArray){
+            System.out.printf("%-28s%-28s%-28s%-28s%-28s%-28s%-28s\n", book.getAuthor(),("|"),book.getTitle(), ("|"), book.getDate(), ("|"), book.getCheckedOutUser());
         }
         System.out.println("\n");
     }
@@ -115,40 +128,40 @@ public class Prompter {
         }
         //switch statement refactor
         if(success && type == "book" && action == "check out"){
-            checkOutItem(type);
+            checkOutItem(type, libraryNumber);
         } else if (success && type == "movie" && action == "check out"){
-            checkOutItem(type);
+            checkOutItem(type, libraryNumber);
         } else if (success && type == "book" && action == "check in"){
-            checkInItem(type);
+            checkInItem(type, libraryNumber);
         } else if (success && type == "movie" && action == "check in"){
-            checkInItem(type);
+            checkInItem(type, libraryNumber);
         }
     }
 
-    public void checkOutItem(String type){
+    public void checkOutItem(String type, String libraryNumber){
         String input = getUserInput("title");
-        if(type.equals("book")) checkOut(input, "book"); else checkOut(input, "movie");
+        if(type.equals("book")) checkOut(input, "book", libraryNumber); else checkOut(input, "movie", libraryNumber);
     }
 
-    public void checkInItem(String type){
+    public void checkInItem(String type, String libraryNumber){
         String input = getUserInput("title");
-        if(type.equals("book")) checkIn(input, "book"); else checkIn(input, "movie");
+        if(type.equals("book")) checkIn(input, "book", libraryNumber); else checkIn(input, "movie", libraryNumber);
     }
 
-    public void checkOut(String input, String type){
+    public void checkOut(String input, String type, String libraryNumber){
         boolean success = false;
         try{
-            success = (type.equals("book")) ? library.bookAction(input, "check out") : library.movieAction(input, "check out");
+            success = (type.equals("book")) ? library.bookAction(input, "check out", libraryNumber): library.movieAction(input, "check out");
         } catch(IllegalArgumentException iae) {
             System.out.println(iae.getMessage());
         }
         System.out.println(((success) && type == "book") ? "\nSuccessfully checked out. Thank you ! Enjoy the book\n" : (success) ? "\nSuccessfully checked out. Thank you ! Enjoy the movie\n" : "\n");
     }
 
-    public void checkIn(String input, String type){
+    public void checkIn(String input, String type, String libraryNumber){
         boolean success = false;
         try{
-            success = (type.equals("book")) ? library.bookAction(input, "check in") : library.movieAction(input, "check in");
+            success = (type.equals("book")) ? library.bookAction(input, "check in", libraryNumber) : library.movieAction(input, "check in");
         } catch (IllegalArgumentException iae){
             System.out.println(iae.getMessage());
         }

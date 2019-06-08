@@ -33,6 +33,10 @@ public class Book {
         checkedOutUser = user;
     }
 
+    public String getCheckedOutUser(){
+        return checkedOutUser;
+    }
+
     public boolean checkOut() {
         if (!checkedOut) {
             return checkedOut = true;

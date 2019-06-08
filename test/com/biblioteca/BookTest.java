@@ -19,6 +19,7 @@ public class BookTest {
         assertEquals("testAuthor", testBook.getAuthor());
         assertEquals("testTitle", testBook.getTitle());
         assertEquals("testDate", testBook.getDate());
+        assertEquals("", testBook.getCheckedOutUser());
     }
 
     @Test

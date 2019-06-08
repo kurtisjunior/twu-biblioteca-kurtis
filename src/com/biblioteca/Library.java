@@ -53,16 +53,21 @@ public class Library {
         return availableMovies;
     }
 
-    public boolean bookAction(String checkedInput, String action){
+    public boolean bookAction(String checkedInput, String action, String libraryNumber){
+        //check if book id equals user id if not return false
         for(Book book : booksArray){
             String formatInput = toLowerCase(checkedInput);
             String formatTitle = toLowerCase(book.getTitle());
             Boolean match = formatInput.equals(formatTitle);
             try{
                 if(match && action == "check out") {
-                    return book.checkOut();
+                    book.checkOut();
+                    book.setCheckedOutUser(libraryNumber);
+                    return true;
                 } else if (match && action == "check in") {
-                    return book.checkIn();
+                    book.checkIn();
+                    book.setCheckedOutUser("");
+                    return true;
                 }
             } catch (IllegalArgumentException iae){
                 System.out.println(iae.getMessage());

@@ -34,12 +34,12 @@ public class LibraryTest  {
 
     @Test
     public void userCanCheckOutBook() {
-        assertTrue(library.bookAction("testTitle", "check out"));
+        assertTrue(library.bookAction("testTitle", "check out", "0"));
     }
 
     @Test
     public void checkedOutBooksAreFilteredFromBookList() {
-        library.bookAction("testTitle", "check out");
+        library.bookAction("testTitle", "check out", "0");
         ArrayList<Book> availableBooks = library.getBooks("available");
 
         assertEquals(1, availableBooks.size());
@@ -49,20 +49,20 @@ public class LibraryTest  {
     @Test
     public void throwsIllegalArgumentExceptionWhenCheckedOutBookDoesNotExist() {
         Throwable checkedOutIae = assertThrows(IllegalArgumentException.class, () ->
-                library.bookAction("invalid title", "check out"));
+                library.bookAction("invalid title", "check out", "0"));
         assertEquals("The book you have selected does not exist, please try again\n\n", checkedOutIae.getMessage());
     }
 
     @Test
     public void userCanCheckInBook(){
-        library.bookAction("testTitle", "check in");
-        assertTrue(library.bookAction("testTitle", "check out"));
+        library.bookAction("testTitle", "check in", "0");
+        assertTrue(library.bookAction("testTitle", "check out", "0"));
     }
 
     @Test
     public void throwsIllegalArgumentExceptionWhenCheckedInBookDoesNotExist() {
         Throwable checkedInIae = assertThrows(IllegalArgumentException.class, () ->
-                library.bookAction("invalid title", "check in"));
+                library.bookAction("invalid title", "check in", "0"));
         assertEquals("The book you have selected does not exist, please try again\n\n", checkedInIae.getMessage());
     }
 
@@ -73,13 +73,13 @@ public class LibraryTest  {
 
     @Test
     public void userCanCheckOutBookInAnyCase(){
-        assertTrue(library.bookAction("TESTTITLE", "check out"));
+        assertTrue(library.bookAction("TESTTITLE", "check out", "0"));
     }
 
     @Test
     public void userCanCheckInBookInAnyCase(){
-        library.bookAction("testTitle", "check out");
-        library.bookAction("TESTTITLE", "check in");
+        library.bookAction("testTitle", "check out", "0");
+        library.bookAction("TESTTITLE", "check in", "0");
     }
 
     @Test
@@ -101,7 +101,7 @@ public class LibraryTest  {
 
     @Test
     public void returnsCheckedOutBooks(){
-        library.bookAction("testTitle", "check out");
+        library.bookAction("testTitle", "check out", "0");
         ArrayList<Book> availableBooks = library.getBooks("checked");
 
         assertEquals(1, availableBooks.size());
