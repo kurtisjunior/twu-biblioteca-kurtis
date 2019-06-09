@@ -8,6 +8,7 @@ public class Library {
     private ArrayList<Book> booksArray;
     private ArrayList<Movie> moviesArray;
     private ArrayList<User> userArray;
+    private ArrayList<User> loggedInUser = new ArrayList<>();
 
     public Library(ArrayList<Book> booksArray, ArrayList<Movie> moviesArray, ArrayList<User> userArray){
         this.booksArray = booksArray;
@@ -115,10 +116,15 @@ public class Library {
         for(User user : userArray){
             if(user.getLibraryNumber().equals(libraryNumber)){
                 if(user.getPassword().equals(password)) {
+                    loggedInUser.add(user);
                     return true;
                 }
             }
         }
         throw new IllegalArgumentException("\nlogin failed, incorrect library number or password\n");
+    }
+
+    public ArrayList getLoggedInUser(){
+        return this.loggedInUser;
     }
 }
