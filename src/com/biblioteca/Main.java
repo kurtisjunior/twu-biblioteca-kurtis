@@ -15,7 +15,7 @@ public class Main {
         movieArray.add(new Movie("Blade Runner", "1982", "Ridley Scott", "8.2"));
 
         ArrayList<User> userArray = new ArrayList<>();
-        userArray.add(new User("0", "k", "a", "a", "1"));
+        userArray.add(new User("000-0000", "Manchester_7", "David Malan", "davidmalan@gmail.com", "07745345678"));
         userArray.add(new User("1", "a", "b", "b", "2"));
 
         Library library = new Library(bookArray, movieArray, userArray);
