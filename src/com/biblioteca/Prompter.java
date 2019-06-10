@@ -168,9 +168,13 @@ public class Prompter {
             System.out.println(iae.getMessage());
         }
         if(success){
-            //ADD USERS NAME TO LOG IN
             userLoggedIn = true;
-            System.out.print("\nSuccessfully logged in. Welcome ???? \n\n");
+            ArrayList<User> loggedInUser = library.getLoggedInUser();
+            System.out.printf("\nSuccessfully logged in, welcome back %s \n", loggedInUser.get(0).getName());
+            System.out.printf("%s\n", loggedInUser.get(0).getEmail());
+            System.out.printf("%s\n\n", loggedInUser.get(0).getNumber());
+
+
             displayLoggedInMenu();
         }
     }

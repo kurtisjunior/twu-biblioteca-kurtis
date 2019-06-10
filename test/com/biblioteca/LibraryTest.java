@@ -32,11 +32,6 @@ public class LibraryTest  {
     }
 
     @Test
-    public void ReturnsAllBooks() {
-        assertEquals(testBooksArray, library.getBooks());
-    }
-
-    @Test
     public void userCanCheckOutBook() {
         assertTrue(library.bookAction("testTitle", "check out", "0"));
     }
@@ -84,11 +79,6 @@ public class LibraryTest  {
     public void userCanCheckInBookInAnyCase(){
         library.bookAction("testTitle", "check out", "000-0000");
         library.bookAction("TESTTITLE", "check in", "000-0000");
-    }
-
-    @Test
-    public void returnsAllMovies(){
-        assertEquals(testMoviesArray, library.getMovies());
     }
 
     @Test

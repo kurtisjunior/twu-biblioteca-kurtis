@@ -16,10 +16,6 @@ public class Library {
         this.userArray = userArray;
     }
 
-    public ArrayList<Book> getBooks(){
-        return this.booksArray;
-    }
-
     public ArrayList<Book> getBooks(String filter) {
         ArrayList<Book> availableBooks = new ArrayList<>();
         if(filter.equals("available")) {
@@ -36,10 +32,6 @@ public class Library {
             }
         }
         return availableBooks;
-    }
-
-    public ArrayList<Movie> getMovies(){
-        return this.moviesArray;
     }
 
     public ArrayList<Movie> getMovies(String filter) {
