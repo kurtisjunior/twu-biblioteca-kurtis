@@ -2,6 +2,7 @@ package com.biblioteca;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.Console;
 
 public class Prompter {
     private Library library;
@@ -14,10 +15,10 @@ public class Prompter {
 
     public void start(){
         displayWelcomeMessage();
-        while(!quitMenu && userLoggedIn == false) {
+        while(!quitMenu && !userLoggedIn) {
             displayPreLoginMenu();
         }
-        while(!quitMenu && userLoggedIn == true){
+        while(!quitMenu && userLoggedIn){
             displayLoggedInMenu();
         }
     }
@@ -152,7 +153,7 @@ public class Prompter {
 
     public String getUserInput(String inputType) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print( inputType == "libraryNumber" ? "Enter library number: " : inputType == "password" ? "Enter password: " : "Enter title: ");
+        System.out.print( inputType.equals("libraryNumber") ? "Enter library number: " : inputType.equals("password") ? "Enter password: " : "Enter title: ");
         String input = (scanner.nextLine());
         return input;
     }
@@ -199,7 +200,7 @@ public class Prompter {
         } catch(IllegalArgumentException iae) {
             System.out.println(iae.getMessage());
         }
-        System.out.println(((success) && type == "book") ? "\nSuccessfully checked out. Thank you ! Enjoy the book\n" : (success) ? "\nSuccessfully checked out. Thank you ! Enjoy the movie\n" : "\n");
+        System.out.println(((success) && type.equals("book") ? "\nSuccessfully checked out. Thank you ! Enjoy the book\n" : (success) ? "\nSuccessfully checked out. Thank you ! Enjoy the movie\n" : "\n"));
     }
 
     public void checkIn(String input, String type){

@@ -30,9 +30,15 @@ public class Main {
 
 /*
 
-refactor changes
-Add users info once logged in
-refactor the spacing
-ensure all tests continue to pass
+Refactor:
+Library item class and extend
+    change the tests
+
+Hide password input
+
+Add option to see user details rather than default display
+
+Current implementation obscures checked out books
+    Add log out feature to return to main menu
 
  */

@@ -1,13 +1,13 @@
 package com.biblioteca;
 
-public class Movie {
+public class Movie extends LibraryItem {
     private String name;
     private String year;
     private String director;
     private String rating;
-    private boolean checkedOut = false;
 
     public Movie(String name, String year, String director, String rating){
+        super();
         this.name = name;
         this.year = year;
         this.director = director;
@@ -30,23 +30,4 @@ public class Movie {
         return this.rating;
     }
 
-
-    public boolean getCheckedStatus() {
-        return this.checkedOut;
-    }
-
-    public boolean checkOut() {
-        if (!checkedOut) {
-            return checkedOut = true;
-        }
-        throw new IllegalArgumentException("\nSorry, that movie is not available\n");
-    }
-
-    public boolean checkIn() {
-        if (checkedOut) {
-            checkedOut = false;
-            return true;
-        }
-        throw new IllegalArgumentException("\nSorry, that movie is already checked in");
-    }
 }

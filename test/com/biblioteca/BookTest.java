@@ -10,7 +10,7 @@ public class BookTest {
     private Book testBook;
 
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         testBook = new Book("testAuthor", "testTitle", "testDate");
     }
 
@@ -23,17 +23,16 @@ public class BookTest {
     }
 
     @Test
-    public void booksCanBeCheckedOut () {
+    public void booksCanBeCheckedOut() {
         testBook.checkOut();
         assertTrue(testBook.getCheckedStatus());
     }
-
     @Test
     public void throwsIllegalArgumentExceptionWhenBookAlreadyCheckedOut() {
         testBook.checkOut();
         Throwable checkedOutIae = assertThrows(IllegalArgumentException.class, () ->
             testBook.checkOut());
-        assertEquals("\nSorry, that book is not available", checkedOutIae.getMessage());
+        assertEquals("\nSorry, that item is not available", checkedOutIae.getMessage());
     }
 
 
@@ -48,7 +47,7 @@ public class BookTest {
     public void throwsIllegalArgumentExceptionWhenBookAlreadyCheckedIn() {
         Throwable checkedInIae = assertThrows(IllegalArgumentException.class, () ->
                 testBook.checkIn());
-        assertEquals("\nSorry, that book is already checked in", checkedInIae.getMessage());
+        assertEquals("\nSorry, that item is already checked in", checkedInIae.getMessage());
     }
 
     @Test
