@@ -1,6 +1,6 @@
 package com.biblioteca;
 
-public class Movie extends LibraryItem {
+public class Movie extends LibraryItem implements Displayable {
     private String name;
     private String year;
     private String director;
@@ -30,4 +30,12 @@ public class Movie extends LibraryItem {
         return this.rating;
     }
 
+    @Override
+    public String display() {
+        return String.format("%-28s%-28s%-28s%-28s%-28s%-28s%-28s\n",
+                getName(),("|"),
+                getYear(), ("|"),
+                getDirector(), ("|"),
+                getRating());
+    }
 }

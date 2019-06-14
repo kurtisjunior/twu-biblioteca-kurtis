@@ -102,16 +102,16 @@ public class Prompter {
                 displayMovies();
                 break;
             case 3:
-                checkOutItem("book");
+                performAction(LibraryItemType.BOOK, LibraryItemAction.CHECK_OUT);
                 break;
             case 4:
-                checkOutItem("movie");
+                performAction(LibraryItemType.MOVIE, LibraryItemAction.CHECK_OUT);
                 break;
             case 5:
-                checkInItem("book");
+                performAction(LibraryItemType.BOOK, LibraryItemAction.CHECK_IN);
                 break;
             case 6:
-                checkInItem("movie");
+                performAction(LibraryItemType.MOVIE, LibraryItemAction.CHECK_IN);
                 break;
             case 7:
                 userLoggedIn = false;
@@ -131,7 +131,7 @@ public class Prompter {
         System.out.printf("%-28s%-28s%-28s%-28s%-28s\n","*** Author ***", (""), "*** Title ***", (""), "*** Published ***");
         ArrayList<Book> booksArray = library.getBooks("available");
         for(Book book : booksArray){
-            System.out.printf("%-28s%-28s%-28s%-28s%-28s\n", book.getAuthor(),("|"),book.getTitle(), ("|"), book.getDate());
+            book.display();
         }
         System.out.println("\n");
     }
@@ -151,7 +151,7 @@ public class Prompter {
         System.out.printf("%-28s%-28s%-28s%-28s%-28s%-28s%-28s\n","*** Name ***", (""), "*** Year ***", (""), "*** Director ***", (""), "*** Rating ***");
         ArrayList<Movie> moviesArray = library.getMovies("available");
         for(Movie movie : moviesArray){
-            System.out.printf("%-28s%-28s%-28s%-28s%-28s%-28s%-28s\n", movie.getName(),("|"),movie.getYear(), ("|"), movie.getDirector(), ("|"), movie.getRating());
+            movie.display();
         }
         System.out.println("\n");
     }
@@ -184,39 +184,22 @@ public class Prompter {
         }
     }
 
-    public void checkOutItem(String type){
-        String input = getUserInput("title");
-        if(type.equals("book")) checkOut(input, "book"); else checkOut(input, "movie");
-    }
 
-    public void checkInItem(String type){
-        String input = getUserInput("title");
-        if(type.equals("book")) checkIn(input, "book"); else checkIn(input, "movie");
-    }
-
-    public void checkOut(String input, String type){
+    private String getLibraryNumber() {
         ArrayList<User> loggedInUser = library.getLoggedInUser();
-        String libraryNumber = loggedInUser.get(0).getLibraryNumber();
+        return loggedInUser.get(0).getLibraryNumber();
+    }
 
-        boolean success = false;
-        try{
-            success = (type.equals("book")) ? library.bookAction(input, "check out", libraryNumber): library.movieAction(input, "check out");
-        } catch(IllegalArgumentException iae) {
+    private void performAction(LibraryItemType type, LibraryItemAction action) {
+        String input = getUserInput("title");
+        String libraryNumber = getLibraryNumber();
+
+        try {
+            library.checkOutItem(type, input, action, libraryNumber);
+        } catch (IllegalArgumentException iae) {
             System.out.println(iae.getMessage());
         }
-        System.out.println(((success) && type.equals("book") ? "\nSuccessfully checked out. Thank you ! Enjoy the book\n" : (success) ? "\nSuccessfully checked out. Thank you ! Enjoy the movie\n" : "\n"));
-    }
 
-    public void checkIn(String input, String type){
-        ArrayList<User> loggedInUser = library.getLoggedInUser();
-        String libraryNumber = loggedInUser.get(0).getLibraryNumber();
-
-        boolean success = false;
-        try{
-            success = (type.equals("book")) ? library.bookAction(input, "check in", libraryNumber) : library.movieAction(input, "check in");
-        } catch (IllegalArgumentException iae){
-            System.out.println(iae.getMessage());
-        }
-        System.out.println((((success)) ? "\nSuccessfully returned. Thank you !\n" : "\n"));
+        System.out.printf("\nSuccessfully checked out. Thank you ! Enjoy the %s\n", type.getValue());
     }
 }

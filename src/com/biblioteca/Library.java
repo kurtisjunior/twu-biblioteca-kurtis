@@ -92,6 +92,7 @@ public class Library {
         throw new IllegalArgumentException("The movie you have selected does not exist, please try again\n\n");
     }
 
+    // look for Java to lowercase method!!!!
     public String toLowerCase(String checkedInput){
         String lowerCase = "";
         for(char letter : checkedInput.toCharArray()){
@@ -123,4 +124,15 @@ public class Library {
     public void clearLoggedInUser(){
         loggedInUser = new ArrayList<>();
     }
+
+    public void checkOutItem(LibraryItemType type, String libraryItemTitle, LibraryItemAction action, String libraryNumber) {
+        if (type == LibraryItemType.BOOK) {
+            bookAction(libraryItemTitle, action.getValue(), libraryNumber);
+        }
+        else if (type == LibraryItemType.MOVIE) {
+            movieAction(libraryItemTitle, action.getValue());
+        }
+    }
+
 }
+

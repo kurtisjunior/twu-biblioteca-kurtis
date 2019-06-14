@@ -1,6 +1,6 @@
 package com.biblioteca;
 
-public class Book extends LibraryItem {
+public class Book extends LibraryItem implements Displayable {
     private String author;
     private String title;
     private String date;
@@ -24,4 +24,8 @@ public class Book extends LibraryItem {
         return this.date;
     }
 
+    @Override
+    public String display() {
+        return String.format("%-28s%-28s%-28s%-28s%-28s\n", getAuthor(),("|"), getTitle(), ("|"), getDate());
+    }
 }

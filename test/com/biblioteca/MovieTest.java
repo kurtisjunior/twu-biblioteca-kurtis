@@ -49,6 +49,12 @@ class MovieTest {
         assertEquals("\nSorry, that item is already checked in", checkedInIae.getMessage());
     }
 
+    @Test
+    public void movieDisplaysItselfNicely() {
+        String display = String.format("%-28s%-28s%-28s%-28s%-28s%-28s%-28s\n", testMovie.getName(),("|"),testMovie.getYear(), ("|"), testMovie.getDirector(), ("|"), testMovie.getRating());
+        assertEquals(display, testMovie.display());
+    }
+
 
 
 }

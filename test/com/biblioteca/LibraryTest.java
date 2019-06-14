@@ -110,6 +110,31 @@ public class LibraryTest  {
         );
         assertEquals("The book you have selected does not exist, please try again\n\n", incorrectBookIae.getMessage());
     }
+
+
+    @Test
+    public void checkOutBookSuccessfully(){
+        library.checkOutItem(LibraryItemType.BOOK,"testTitle", LibraryItemAction.CHECK_OUT, "000-0000");
+        ArrayList<Book> availableBooks = library.getBooks("checked");
+
+        assertEquals(1, availableBooks.size());
+        assertEquals("testAuthor", availableBooks.get(0).getAuthor());
+
+    }
+
+    @Test
+    public void checkOutMovieSuccessfully(){
+        library.checkOutItem(LibraryItemType.MOVIE, "testName", LibraryItemAction.CHECK_OUT, "000-0000");
+
+        assertTrue(testMoviesArray.get(0).getCheckedStatus());
+        assertFalse(testMoviesArray.get(1).getCheckedStatus());
+    }
+
+
+
+
+
+
 }
 
 

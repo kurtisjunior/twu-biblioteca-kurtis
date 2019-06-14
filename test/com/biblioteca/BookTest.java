@@ -55,5 +55,11 @@ public class BookTest {
         testBook.setCheckedOutUser("000-0000");
     }
 
+    @Test
+    public void bookDisplaysItselfNicely() {
+        String display = String.format("%-28s%-28s%-28s%-28s%-28s\n", testBook.getAuthor(),("|"),testBook.getTitle(), ("|"), testBook.getDate());
+        assertEquals(display, testBook.display());
+    }
+
 }
 
