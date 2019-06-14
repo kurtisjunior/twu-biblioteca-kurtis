@@ -2,11 +2,10 @@ package com.biblioteca;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.io.Console;
 
 public class Prompter {
     private Library library;
-    public boolean quitMenu = false;
+    private boolean quitMenu = false;
     private Boolean userLoggedIn = false;
 
     public Prompter(Library library) {
@@ -15,12 +14,16 @@ public class Prompter {
 
     public void start(){
         displayWelcomeMessage();
-        while(!quitMenu && !userLoggedIn) {
-            displayPreLoginMenu();
+
+        while(!quitMenu){
+            if(!userLoggedIn) {
+                displayPreLoginMenu();
+            } else {
+                displayLoggedInMenu();
+            }
         }
-        while(!quitMenu && userLoggedIn){
-            displayLoggedInMenu();
-        }
+        System.out.println("\nThanks for using Biblioteca !");
+        System.exit(0);
     }
 
     public void displayWelcomeMessage() {
@@ -52,7 +55,7 @@ public class Prompter {
     }
 
     public void displayLoggedInMenu() {
-        String [] menuOptions = {"Menu Options: ", "1. List of books", "2. List of movies", "3. Check out book", "4. Check out movie", "5. Return book", "6. Return movie", "7. Quit"};
+        String [] menuOptions = {"Menu Options: ", "1. List of books", "2. List of movies", "3. Check out book", "4. Check out movie", "5. Return book", "6. Return movie", "7. Log out", "8. Quit"};
         for(String option : menuOptions) {
             System.out.println(option);
         }
@@ -84,8 +87,7 @@ public class Prompter {
                 break;
             case 5:
                 quitMenu = true;
-                System.out.println("\nThanks for using Biblioteca !");
-                System.exit(0);
+
             default:
                 System.out.println("Please select a valid option");
         }
@@ -112,9 +114,13 @@ public class Prompter {
                 checkInItem("movie");
                 break;
             case 7:
+                userLoggedIn = false;
+                library.clearLoggedInUser();
+
+                //add function to start the while loop again from main menu
+                break;
+            case 8:
                 quitMenu = true;
-                System.out.println("\nThanks for using Biblioteca !");
-                System.exit(0);
             default:
                 System.out.println("Please select a valid option");
         }
@@ -174,8 +180,6 @@ public class Prompter {
             System.out.printf("\nSuccessfully logged in, welcome back %s \n", loggedInUser.get(0).getName());
             System.out.printf("%s\n", loggedInUser.get(0).getEmail());
             System.out.printf("%s\n\n", loggedInUser.get(0).getNumber());
-
-
             displayLoggedInMenu();
         }
     }

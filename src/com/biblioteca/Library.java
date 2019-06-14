@@ -16,7 +16,7 @@ public class Library {
         this.userArray = userArray;
     }
 
-    public ArrayList<Book> getBooks(String filter) {
+    ArrayList<Book> getBooks(String filter) {
         ArrayList<Book> availableBooks = new ArrayList<>();
         if(filter.equals("available")) {
             for(Book book : booksArray) {
@@ -118,5 +118,9 @@ public class Library {
 
     public ArrayList getLoggedInUser(){
         return this.loggedInUser;
+    }
+
+    public void clearLoggedInUser(){
+        loggedInUser = new ArrayList<>();
     }
 }
