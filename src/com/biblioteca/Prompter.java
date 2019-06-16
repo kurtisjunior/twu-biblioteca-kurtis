@@ -116,8 +116,6 @@ public class Prompter {
             case 7:
                 userLoggedIn = false;
                 library.clearLoggedInUser();
-
-                //add function to start the while loop again from main menu
                 break;
             case 8:
                 quitMenu = true;
