@@ -155,7 +155,7 @@ public class Prompter {
     }
 
 
-    public String getUserInput(String inputType) {
+    public String getUserInput(UserInputAction inputType) {
         Scanner scanner = new Scanner(System.in);
         System.out.print( inputType.equals("libraryNumber") ? "Enter library number: " : inputType.equals("password") ? "Enter password: " : "Enter title: ");
         String input = (scanner.nextLine());
@@ -165,8 +165,8 @@ public class Prompter {
 
     public void validateUserCredentials(){
         Boolean success = false;
-        String libraryNumber = getUserInput("libraryNumber");
-        String password = getUserInput("password");
+        String libraryNumber = getUserInput(UserInputAction.LIBRARY_NUMBER);
+        String password = getUserInput(UserInputAction.PASSWORD);
         try{
             success = library.userLogIn(libraryNumber, password);
         }catch(IllegalArgumentException iae){
@@ -189,7 +189,7 @@ public class Prompter {
     }
 
     private void performAction(LibraryItemType type, LibraryItemAction action) {
-        String input = getUserInput("title");
+        String input = getUserInput(UserInputAction.TITLE);
         String libraryNumber = getLibraryNumber();
 
         try {
