@@ -48,8 +48,8 @@ public class Library {
     public boolean bookAction(String checkedInput, String action, String libraryNumber){
         //check if book id equals user id if not return false
         for(Book book : booksArray){
-            String formatInput = toLowerCase(checkedInput);
-            String formatTitle = toLowerCase(book.getTitle());
+            String formatInput = checkedInput.toLowerCase();
+            String formatTitle = book.getTitle().toLowerCase();
 
             Boolean titleMatch = formatInput.equals(formatTitle);
             Boolean bookMatch = libraryNumber.equals(book.getCheckedOutUser());
@@ -74,8 +74,8 @@ public class Library {
 
     public boolean movieAction(String checkedInput, String action){
         for (Movie movie : moviesArray){
-            String formatInput = toLowerCase(checkedInput);
-            String formatTitle = toLowerCase(movie.getName());
+            String formatInput = checkedInput.toLowerCase();
+            String formatTitle = movie.getName().toLowerCase();
             Boolean match = formatInput.equals(formatTitle);
             try{
                 if(match && action.equals("check out")){
@@ -89,19 +89,6 @@ public class Library {
             }
         }
         throw new IllegalArgumentException("The movie you have selected does not exist, please try again\n\n");
-    }
-
-    // look for Java to lowercase method!!!!
-    public String toLowerCase(String checkedInput){
-        String lowerCase = "";
-        for(char letter : checkedInput.toCharArray()){
-            if(Character.isUpperCase(letter)) {
-                lowerCase += Character.toLowerCase(letter);
-            } else {
-                lowerCase += letter;
-            }
-        }
-        return lowerCase;
     }
 
     public Boolean userLogIn(String libraryNumber, String password){

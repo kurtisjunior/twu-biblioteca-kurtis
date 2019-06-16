@@ -51,7 +51,7 @@ class MovieTest {
 
     @Test
     public void movieDisplaysItselfNicely() {
-        String display = String.format("%-28s%-28s%-28s%-28s%-28s%-28s%-28s\n", testMovie.getName(),("|"),testMovie.getYear(), ("|"), testMovie.getDirector(), ("|"), testMovie.getRating());
+        String display = String.format("%-28s%-28s%-28s%-28s%-28s%-28s%-28s", testMovie.getName(),("|"),testMovie.getYear(), ("|"), testMovie.getDirector(), ("|"), testMovie.getRating());
         assertEquals(display, testMovie.display());
     }
 

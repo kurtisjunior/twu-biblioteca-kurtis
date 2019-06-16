@@ -26,6 +26,6 @@ public class Book extends LibraryItem implements Displayable {
 
     @Override
     public String display() {
-        return String.format("%-28s%-28s%-28s%-28s%-28s\n", getAuthor(),("|"), getTitle(), ("|"), getDate());
+        return String.format("%-28s%-28s%-28s%-28s%-28s", getAuthor(),("|"), getTitle(), ("|"), getDate());
     }
 }

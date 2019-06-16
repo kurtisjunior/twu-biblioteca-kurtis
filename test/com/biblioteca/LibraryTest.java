@@ -66,11 +66,6 @@ public class LibraryTest  {
     }
 
     @Test
-    public void titleCaseDefaultsToLowerCase(){
-        assertEquals("testtitle", library.toLowerCase("TESTTITLE"));
-    }
-
-    @Test
     public void userCanCheckOutBookInAnyCase(){
         assertTrue(library.bookAction("TESTTITLE", "check out", "0"));
     }

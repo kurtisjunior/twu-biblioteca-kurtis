@@ -57,7 +57,7 @@ public class BookTest {
 
     @Test
     public void bookDisplaysItselfNicely() {
-        String display = String.format("%-28s%-28s%-28s%-28s%-28s\n", testBook.getAuthor(),("|"),testBook.getTitle(), ("|"), testBook.getDate());
+        String display = String.format("%-28s%-28s%-28s%-28s%-28s", testBook.getAuthor(),("|"),testBook.getTitle(), ("|"), testBook.getDate());
         assertEquals(display, testBook.display());
     }
 

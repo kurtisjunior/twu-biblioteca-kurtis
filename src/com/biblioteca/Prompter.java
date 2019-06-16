@@ -129,7 +129,7 @@ public class Prompter {
         System.out.printf("%-28s%-28s%-28s%-28s%-28s\n","*** Author ***", (""), "*** Title ***", (""), "*** Published ***");
         ArrayList<Book> booksArray = library.getBooks("available");
         for(Book book : booksArray){
-            book.display();
+            System.out.println(book.display());
         }
         System.out.println("\n");
     }
@@ -149,7 +149,7 @@ public class Prompter {
         System.out.printf("%-28s%-28s%-28s%-28s%-28s%-28s%-28s\n","*** Name ***", (""), "*** Year ***", (""), "*** Director ***", (""), "*** Rating ***");
         ArrayList<Movie> moviesArray = library.getMovies("available");
         for(Movie movie : moviesArray){
-            movie.display();
+            System.out.println(movie.display());
         }
         System.out.println("\n");
     }

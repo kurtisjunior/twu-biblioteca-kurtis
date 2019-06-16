@@ -32,7 +32,7 @@ public class Movie extends LibraryItem implements Displayable {
 
     @Override
     public String display() {
-        return String.format("%-28s%-28s%-28s%-28s%-28s%-28s%-28s\n",
+        return String.format("%-28s%-28s%-28s%-28s%-28s%-28s%-28s",
                 getName(),("|"),
                 getYear(), ("|"),
                 getDirector(), ("|"),
