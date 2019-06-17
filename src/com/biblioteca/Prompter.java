@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Prompter {
+    private String AVAILABLE_BOOKS_HEADER = String.format("%80s\n\n", "-------- Available books --------");
+    private String CHECKEDOUT_BOOKS_HEADER = String.format("%100s\n\n", "-------- Checked out books --------");
+    private String AVAILABLE_BOOKS_COLUMNS = String.format("%-28s%-28s%-28s%-28s%-28s\n","*** Author ***", (""), "*** Title ***", (""), "*** Published ***");
+    private String CHECKEDOUT_BOOKS_COLUMNS = String.format("%-28s%-28s%-28s%-28s%-28s%-28s%-28s\n","*** Author ***", (""), "*** Title ***", (""), "*** Published ***", (""), "*** User ***");
+    private String AVAILABLE_MOVIE_HEADER = String.format("%100s\n\n", "-------- Available movies --------");
+    private String AVAILABLE_MOVIE_COLUMNS = String.format("%-28s%-28s%-28s%-28s%-28s%-28s%-28s\n","*** Name ***", (""), "*** Year ***", (""), "*** Director ***", (""), "*** Rating ***");
+
+
     private Library library;
     private boolean quitMenu = false;
     private Boolean userLoggedIn = false;
@@ -74,13 +82,13 @@ public class Prompter {
     public void handlePreLoggedInMenu(int input) {
         switch (input) {
             case 1:
-                displayAvailableBooks();
+                display(AVAILABLE_BOOKS_HEADER, AVAILABLE_BOOKS_COLUMNS, library.getBooks("available"));
                 break;
             case 2:
-                displayMovies();
+                display(AVAILABLE_MOVIE_HEADER, AVAILABLE_MOVIE_COLUMNS, library.getMovies("available"));
                 break;
             case 3:
-                displayCheckedBooks();
+                display(CHECKEDOUT_BOOKS_HEADER, CHECKEDOUT_BOOKS_COLUMNS, library.getBooks("checked"));
                 break;
             case 4:
                 validateUserCredentials();
@@ -96,10 +104,10 @@ public class Prompter {
     public void handleLoggedInMenu(int input) {
         switch (input) {
             case 1:
-                displayAvailableBooks();
+                display(AVAILABLE_BOOKS_HEADER, AVAILABLE_BOOKS_COLUMNS, library.getBooks("available"));
                 break;
             case 2:
-                displayMovies();
+                display(AVAILABLE_MOVIE_HEADER, AVAILABLE_MOVIE_COLUMNS, library.getMovies("available"));
                 break;
             case 3:
                 performAction(LibraryItemType.BOOK, LibraryItemAction.CHECK_OUT);
@@ -124,33 +132,14 @@ public class Prompter {
         }
     }
 
-    public void displayAvailableBooks(){
-        System.out.printf("%80s\n\n", "-------- Available books --------");
-        System.out.printf("%-28s%-28s%-28s%-28s%-28s\n","*** Author ***", (""), "*** Title ***", (""), "*** Published ***");
-        ArrayList<Book> booksArray = library.getBooks("available");
-        for(Book book : booksArray){
-            System.out.println(book.display());
-        }
-        System.out.println("\n");
-    }
+    void display(String header, String columns, ArrayList<? extends Displayable> items) {
+        System.out.print(header);
+        System.out.print(columns);
 
-    public void displayCheckedBooks(){
-        System.out.printf("%100s\n\n", "-------- Checked out books --------");
-        System.out.printf("%-28s%-28s%-28s%-28s%-28s%-28s%-28s\n","*** Author ***", (""), "*** Title ***", (""), "*** Published ***", (""), "*** User ***");
-        ArrayList<Book> booksArray = library.getBooks("checked");
-        for(Book book : booksArray){
-            System.out.printf("%-28s%-28s%-28s%-28s%-28s%-28s%-28s\n", book.getAuthor(),("|"),book.getTitle(), ("|"), book.getDate(), ("|"), book.getCheckedOutUser());
+        for(Displayable item : items){
+            System.out.println(item.display());
         }
-        System.out.println("\n");
-    }
 
-    public void displayMovies(){
-        System.out.printf("%100s\n\n", "-------- Available movies --------");
-        System.out.printf("%-28s%-28s%-28s%-28s%-28s%-28s%-28s\n","*** Name ***", (""), "*** Year ***", (""), "*** Director ***", (""), "*** Rating ***");
-        ArrayList<Movie> moviesArray = library.getMovies("available");
-        for(Movie movie : moviesArray){
-            System.out.println(movie.display());
-        }
         System.out.println("\n");
     }
 

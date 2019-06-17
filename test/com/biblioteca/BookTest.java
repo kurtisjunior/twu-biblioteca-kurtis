@@ -56,8 +56,15 @@ public class BookTest {
     }
 
     @Test
-    public void bookDisplaysItselfNicely() {
+    public void bookDisplaysItselfNicelyWhenNotCheckedOut() {
         String display = String.format("%-28s%-28s%-28s%-28s%-28s", testBook.getAuthor(),("|"),testBook.getTitle(), ("|"), testBook.getDate());
+        assertEquals(display, testBook.display());
+    }
+
+    @Test
+    public void bookDisplaysItselfNicelyWhenCheckedOut() {
+        testBook.checkOut();
+        String display = String.format("%-28s%-28s%-28s%-28s%-28s%-28s%-28s", testBook.getAuthor(),("|"),testBook.getTitle(), ("|"), testBook.getDate(), ("|"), testBook.getCheckedOutUser());
         assertEquals(display, testBook.display());
     }
 

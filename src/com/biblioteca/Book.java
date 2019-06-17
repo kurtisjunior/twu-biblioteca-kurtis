@@ -26,6 +26,10 @@ public class Book extends LibraryItem implements Displayable {
 
     @Override
     public String display() {
+        if(getCheckedStatus()) {
+            return String.format("%-28s%-28s%-28s%-28s%-28s%-28s%-28s", getAuthor(),("|"), getTitle(), ("|"), getDate(), ("|"), getCheckedOutUser());
+        }
         return String.format("%-28s%-28s%-28s%-28s%-28s", getAuthor(),("|"), getTitle(), ("|"), getDate());
+
     }
 }
